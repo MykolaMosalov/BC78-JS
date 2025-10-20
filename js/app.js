@@ -45,3 +45,46 @@ function someFun(enteredPrompt) {
 // alert(someFun(enteredPrompt));
 // console.log(someFun(55));
 // console.log(someFun(56));
+
+//TODO:============task-4=========================
+// Є 3 вікові групи : діти (0-16), дорослі(17-60), пенсіонери (61-100).
+// До якої групи відноситься Максим, якщо йому 55 років.Назву групи вивести на екран.
+const age = 55;
+function ageGroup(age) {
+  // let group;
+
+  // if (age >= 0 && age <= 16) {
+  //   // return "діти";
+  //   group = "діти";
+  // } else if (age >= 17 && age <= 60) {
+  //   // return "дорослі";
+  //   group = "дорослі";
+  // } else if (age >= 61 && age <= 100) {
+  //   // return "пенсіонери";
+  //   group = "пенсіонери";
+  // } else {
+  //   group = "ERROR";
+  // }
+  // return group;
+
+  if (age >= 0 && age <= 16) {
+    return "діти";
+  }
+
+  if (age >= 17 && age <= 60) {
+    return "дорослі";
+  }
+
+  if (age >= 61 && age <= 100) {
+    return "пенсіонери";
+  }
+
+  return "Error";
+}
+
+console.log(ageGroup(age));
+console.log(ageGroup(5));
+console.log(ageGroup(35));
+console.log(ageGroup(99));
+console.log(ageGroup(101));
+console.log(ageGroup(-101));
