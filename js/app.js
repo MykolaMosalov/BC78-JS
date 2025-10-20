@@ -28,3 +28,20 @@ function sumLetters(firstName, lastName) {
 
 // console.log(sumLetters(firstName, lastName));
 // console.log(sumLetters("Віктор", "Сташко"));
+
+//TODO:============task-3=========================
+// Написати скрипт, який перевіряє чи введене число через prompt потрапляє в діапазон від 55 до 99 включно.
+// Якщо так, вивести в консоль "Число потрапляє в діапазон".
+// Якщо ні, вивести в консоль "Число не потрапляє в діапазон".
+
+const enteredPrompt = +prompt("Enter number");
+
+function someFun(enteredPrompt) {
+  return enteredPrompt >= 55 && enteredPrompt <= 99
+    ? "Число потрапляє в діапазон"
+    : "Число не потрапляє в діапазон";
+}
+
+// alert(someFun(enteredPrompt));
+// console.log(someFun(55));
+// console.log(someFun(56));
