@@ -7,7 +7,7 @@
 const str = "abcde";
 
 function checkSymbol(str) {
-  return str.startsWith("a") ? "так" : "ні";
+    return str.startsWith("a") ? "так" : "ні";
 }
 // console.log(checkSymbol(str));
 // console.log(checkSymbol("bcde"));
@@ -21,9 +21,9 @@ function checkSymbol(str) {
 const firstName = "Elore";
 const lastName = "Olabi";
 function sumLetters(firstName, lastName) {
-  const first = firstName.length;
-  const last = lastName.length;
-  return first > 4 && last > 5 ? first + last : "неможливо виконати умову";
+    const first = firstName.length;
+    const last = lastName.length;
+    return first > 4 && last > 5 ? first + last : "неможливо виконати умову";
 }
 
 // console.log(sumLetters(firstName, lastName));
@@ -34,13 +34,13 @@ function sumLetters(firstName, lastName) {
 // Якщо так, вивести в консоль "Число потрапляє в діапазон".
 // Якщо ні, вивести в консоль "Число не потрапляє в діапазон".
 
-const enteredPrompt = +prompt("Enter number");
+// const enteredPrompt = +prompt("Enter number");
 
-function someFun(enteredPrompt) {
-  return enteredPrompt >= 55 && enteredPrompt <= 99
-    ? "Число потрапляє в діапазон"
-    : "Число не потрапляє в діапазон";
-}
+// function someFun(enteredPrompt) {
+//   return enteredPrompt >= 55 && enteredPrompt <= 99
+//     ? "Число потрапляє в діапазон"
+//     : "Число не потрапляє в діапазон";
+// }
 
 // alert(someFun(enteredPrompt));
 // console.log(someFun(55));
@@ -51,40 +51,69 @@ function someFun(enteredPrompt) {
 // До якої групи відноситься Максим, якщо йому 55 років.Назву групи вивести на екран.
 const age = 55;
 function ageGroup(age) {
-  // let group;
+    // let group;
 
-  // if (age >= 0 && age <= 16) {
-  //   // return "діти";
-  //   group = "діти";
-  // } else if (age >= 17 && age <= 60) {
-  //   // return "дорослі";
-  //   group = "дорослі";
-  // } else if (age >= 61 && age <= 100) {
-  //   // return "пенсіонери";
-  //   group = "пенсіонери";
-  // } else {
-  //   group = "ERROR";
-  // }
-  // return group;
+    // if (age >= 0 && age <= 16) {
+    //   // return "діти";
+    //   group = "діти";
+    // } else if (age >= 17 && age <= 60) {
+    //   // return "дорослі";
+    //   group = "дорослі";
+    // } else if (age >= 61 && age <= 100) {
+    //   // return "пенсіонери";
+    //   group = "пенсіонери";
+    // } else {
+    //   group = "ERROR";
+    // }
+    // return group;
 
-  if (age >= 0 && age <= 16) {
-    return "діти";
-  }
+    if (age >= 0 && age <= 16) {
+        return "діти";
+    }
 
-  if (age >= 17 && age <= 60) {
-    return "дорослі";
-  }
+    if (age >= 17 && age <= 60) {
+        return "дорослі";
+    }
 
-  if (age >= 61 && age <= 100) {
-    return "пенсіонери";
-  }
+    if (age >= 61 && age <= 100) {
+        return "пенсіонери";
+    }
 
-  return "Error";
+    return "Error";
 }
 
-console.log(ageGroup(age));
-console.log(ageGroup(5));
-console.log(ageGroup(35));
-console.log(ageGroup(99));
-console.log(ageGroup(101));
-console.log(ageGroup(-101));
+// console.log(ageGroup(age));
+// console.log(ageGroup(5));
+// console.log(ageGroup(35));
+// console.log(ageGroup(99));
+// console.log(ageGroup(101));
+// console.log(ageGroup(-101));
+
+//TODO:============task-5=========================
+// Змінна num може набувати 4 значення: 1, 2, 3 або 4. Якщо вона має
+// значення '1', то у змінну result запишемо 'зима', якщо має значення
+// '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
+
+const num = 25;
+let year;
+switch (num) {
+    case 1:
+        year = "зима";
+
+        break;
+
+    case 2:
+        year = "весна";
+        break;
+
+    case 3:
+        year = "літо";
+        break;
+
+    case 4:
+        year = "осінь";
+        break;
+    default:
+        year = "Такої пори року не існує";
+}
+console.log(year);
