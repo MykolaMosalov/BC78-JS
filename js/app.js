@@ -4,10 +4,10 @@
 // Перевірте, що першим символом цього рядка є буква 'a'.
 // Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 
-const str = "abcde";
+const str = 'abcde';
 
 function checkSymbol(str) {
-    return str.startsWith("a") ? "так" : "ні";
+  return str.startsWith('a') ? 'так' : 'ні';
 }
 // console.log(checkSymbol(str));
 // console.log(checkSymbol("bcde"));
@@ -18,12 +18,12 @@ function checkSymbol(str) {
 // Наприклад: “Віктор Сташко” Віктор - 6 літер, Сташко - 6 літер. Виводимо 12.
 // Використовувати вбудований метод length.
 
-const firstName = "Elore";
-const lastName = "Olabi";
+const firstName = 'Elore';
+const lastName = 'Olabi';
 function sumLetters(firstName, lastName) {
-    const first = firstName.length;
-    const last = lastName.length;
-    return first > 4 && last > 5 ? first + last : "неможливо виконати умову";
+  const first = firstName.length;
+  const last = lastName.length;
+  return first > 4 && last > 5 ? first + last : 'неможливо виконати умову';
 }
 
 // console.log(sumLetters(firstName, lastName));
@@ -51,35 +51,35 @@ function sumLetters(firstName, lastName) {
 // До якої групи відноситься Максим, якщо йому 55 років.Назву групи вивести на екран.
 const age = 55;
 function ageGroup(age) {
-    // let group;
+  // let group;
 
-    // if (age >= 0 && age <= 16) {
-    //   // return "діти";
-    //   group = "діти";
-    // } else if (age >= 17 && age <= 60) {
-    //   // return "дорослі";
-    //   group = "дорослі";
-    // } else if (age >= 61 && age <= 100) {
-    //   // return "пенсіонери";
-    //   group = "пенсіонери";
-    // } else {
-    //   group = "ERROR";
-    // }
-    // return group;
+  // if (age >= 0 && age <= 16) {
+  //   // return "діти";
+  //   group = "діти";
+  // } else if (age >= 17 && age <= 60) {
+  //   // return "дорослі";
+  //   group = "дорослі";
+  // } else if (age >= 61 && age <= 100) {
+  //   // return "пенсіонери";
+  //   group = "пенсіонери";
+  // } else {
+  //   group = "ERROR";
+  // }
+  // return group;
 
-    if (age >= 0 && age <= 16) {
-        return "діти";
-    }
+  if (age >= 0 && age <= 16) {
+    return 'діти';
+  }
 
-    if (age >= 17 && age <= 60) {
-        return "дорослі";
-    }
+  if (age >= 17 && age <= 60) {
+    return 'дорослі';
+  }
 
-    if (age >= 61 && age <= 100) {
-        return "пенсіонери";
-    }
+  if (age >= 61 && age <= 100) {
+    return 'пенсіонери';
+  }
 
-    return "Error";
+  return 'Error';
 }
 
 // console.log(ageGroup(age));
@@ -97,23 +97,54 @@ function ageGroup(age) {
 const num = 25;
 let year;
 switch (num) {
-    case 1:
-        year = "зима";
+  case 1:
+    year = 'зима';
 
-        break;
+    break;
 
-    case 2:
-        year = "весна";
-        break;
+  case 2:
+    year = 'весна';
+    break;
 
-    case 3:
-        year = "літо";
-        break;
+  case 3:
+    year = 'літо';
+    break;
 
-    case 4:
-        year = "осінь";
-        break;
-    default:
-        year = "Такої пори року не існує";
+  case 4:
+    year = 'осінь';
+    break;
+  default:
+    year = 'Такої пори року не існує';
 }
-console.log(year);
+// console.log(year);
+
+//TODO:============task-6=========================
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch.
+
+const drink = prompt('Який напій бажаєте?').toLowerCase();
+
+function orderDrink(drink) {
+  let value;
+
+  switch (drink) {
+    case 'кава':
+      value = 80;
+      break;
+
+    case 'чай':
+      value = 50;
+      break;
+
+    case 'сік':
+      value = 40;
+      break;
+
+    default:
+      return 'Такого напою не має';
+  }
+
+  return `Сума до сплати ${value} грн`;
+}
+
+alert(orderDrink(drink));
