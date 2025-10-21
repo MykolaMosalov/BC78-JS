@@ -147,7 +147,7 @@
 
 // ?  Дано рядок 'Vasyl Pupkin is 24 years old'. Скопіюйте з цього рядка окремо ім'я з прізвищем та окремо вік.
 
-const str = "Vasyl Pupkin is 24 years old";
+const str = 'Vasyl Pupkin is 24 years old';
 
 function createInfoAboutUser(str) {
   // const strCopy = str.split(" ");
@@ -171,9 +171,35 @@ function createInfoAboutUser(str) {
 // ****
 // *****
 
-let star = "*";
+// let star = '*';
 
-for (let i = 0; i < 7; i += 1) {
-  console.log(star);
-  star += "*";
-}
+// for (let i = 1; i <= 7; i += 1) {
+//   console.log(star);
+//   star += '*';
+// }
+
+// let num;
+
+// do {
+//   num = Number(prompt('Веддшть число більше 100'));
+// } while (num < 100);
+
+//! Оператор break & continue
+//TODO:============task-03=========================
+//Напишіть цикл, який виводить у консоль
+// числа від max до min за спаданням
+// Додайте усі парні числа від min до max
+
+// const max = 80;
+// const min = 40;
+// let total = 0;
+
+// for (let i = max; i >= min; i--) {
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+//   console.log(`Парні - ${i}`);
+//   total += i;
+// }
+
+// console.log(`Сума усіх парних чисел = ${total}`);
