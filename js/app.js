@@ -161,4 +161,19 @@ function createInfoAboutUser(str) {
   return `${fullUserName} - ${age} year`;
 }
 
-console.log(createInfoAboutUser(str));
+// console.log(createInfoAboutUser(str));
+
+//TODO:============task-01=========================
+//  Виведіть методом console.log() зірочки від 1 до 7 штук у вигляді трикутника таким чином
+// *
+// **
+// ***
+// ****
+// *****
+
+let star = "*";
+
+for (let i = 0; i < 7; i += 1) {
+  console.log(star);
+  star += "*";
+}
