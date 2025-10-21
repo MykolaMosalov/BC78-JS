@@ -1,39 +1,77 @@
-// * Заняття 4:
+//* Розгалуження: if, if...else, else...if
+//TODO:============task-1=========================
+//Даний рядок, що складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є буква 'a'.
+// Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 
-// ? Методи рядків: slice, toLowerCase, includes,startsWith,indexOf,trim
-// ? Цикли: while, do while, for
-// ? Оператор break & continue
+// const str = "abcde";
 
-// const str = 'Hi, Hello World';
-// const value = str.indexOf('o');
-// console.log(value); // 4
-// console.log(str.slice(0, value + 1));
+function checkSymbol(str) {
+  return str.startsWith("a") ? "так" : "ні";
+}
+// console.log(checkSymbol(str));
+// console.log(checkSymbol("bcde"));
 
-// if(){}
+//TODO:============task-2=========================
+// Якщо ваше ім’я містить більше 4 букв і прізвище більше 5, то виведіть на екран число, яке дорівнює сумі букв імені і прізвища.
+// Якщо умова не виконується - вивести “неможливо виконати умову”.
+// Наприклад: “Віктор Сташко” Віктор - 6 літер, Сташко - 6 літер. Виводимо 12.
+// Використовувати вбудований метод length.
 
-const min = 48;
-const max = 60;
+// String.toLowerCase();
 
-function fn() {
-  for (let i = min; i <= max; i += 1) {
-    if (i === 55) {
-      console.log(i);
-      return;
-    }
+// * Методи рядків: slice, toLowerCase, includes,startsWith,indexOf,trim
 
-    console.log(i);
-  }
+//? Запитайте у користувача ім'я та дізнайтеся, зі скількох символів, воно складається.
+// const userName = prompt("Введите имя");
+
+function calcSymbol(str) {
+  return str.length;
 }
 
-// fn();
+// alert(calcSymbol(userName));
 
-// ! While
-// let i = 0;
-// while (i < 10) {
-//   console.log(i);
-//   i += 1;
-// }
+//? Попросіть користувача ввести email і переведіть у нижній регістр.
 
-// do {
-//   console.log('Hello');
-// } while (false);
+// const eMale = prompt("Введите email");
+
+function loLowerEmail(str) {
+  return str.toLowerCase();
+}
+
+// alert(loLowerEmail(eMale));
+
+//? Попросіть користувача ввести email і переведіть у верхній регістр
+// const eMale = prompt("Введите email");
+
+function loUpperEmail(str) {
+  return str.toUpperCase();
+}
+
+// alert(loUpperEmail(eMale));
+
+// ? Є рядок 'HTML, CSS, JS, PHP, React, Vue, Node.js, C, C++'. Дізнайтеся, чи є в цьому рядку мова: 'JavaScript', або 'JS'?
+
+const langs = "HTML, CSS, PHP, React, Vue, Node.js, C, C++";
+
+function langIncl(str) {
+  return str.includes("JavaScript") || str.includes("JS");
+}
+// console.log(langs.indexOf("ku"));
+
+// console.log(langIncl(langs));
+
+// ? Якщо є, дізнайтесь позицію на якій перебуває цей підрядок
+
+function indexOfIncl(str) {
+  let message = "";
+  if (str.includes("JavaScript")) {
+    message = `JavaScript stay in ${str.indexOf("JavaScript")}; `;
+  }
+  if (str.includes("JS")) {
+    message += `JS stay in ${str.indexOf("JS")}; `;
+  }
+  return message;
+}
+
+console.log(indexOfIncl(langs));
