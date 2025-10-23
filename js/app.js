@@ -138,15 +138,56 @@
 //TODO:=========task-5=================
 // Створити масив з 10-ти чисел. Напиши функцію яуа буде шукати найбільше число.
 
-const numberArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-function fintMaxNumber(numberArray) {
-  let total = numberArray[0];
-  for (const number of numberArray) {
-    if (number > total) {
-      total = number;
+const numbersArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+function findMaxNumber(arr) {
+  let maxNumber = arr[0];
+
+  for (const number of arr) {
+    if (number > maxNumber) {
+      maxNumber = number;
     }
   }
-  return total;
+
+  return maxNumber;
 }
 
-console.log(fintMaxNumber(numberArray));
+// console.log(findMaxNumber(numbersArray));
+// console.log(findMaxNumber([10, 20, 3000, 100]));
+// console.log(findMaxNumber([2, 10, 56, 1]));
+
+// function fintMaxNumber(numberArray) {
+//   let total = numberArray[0];
+//   for (const number of numberArray) {
+//     if (number > total) {
+//       total = number;
+//     }
+//   }
+//   return total;
+// }
+
+// console.log(fintMaxNumber(numberArray));
+
+//TODO:=========task-6=================
+// Створи 2 масиви чисел. Обьеднай їх за допомогою методу масиву. Створи нові масив і за допомогою циклу for або for..of, в перший масив збери усі парні числи, а в другій усі не парні і виведи їх в консоль.
+
+const firstArray = [1, 2, 3, 5, 4, 0];
+const secondArray = [10, 21, 33, 55, 44];
+
+const concatArr = firstArray.concat(secondArray);
+
+const evenNumberArr = [];
+const oddNumberArr = [];
+
+for (const number of concatArr) {
+  // number % 2 === 0 ? evenNumberArr.push(number) : oddNumberArr.push(number);
+
+  if (number % 2 === 0) {
+    evenNumberArr.push(number);
+  } else {
+    oddNumberArr.push(number);
+  }
+}
+
+// console.log(evenNumberArr);
+// console.log(oddNumberArr);
