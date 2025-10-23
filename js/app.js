@@ -77,3 +77,38 @@
 // }
 
 // console.log(arr);
+
+//TODO:=========task-1=================
+//Перетворити рядок, що містить слова, розділені комами, в масив слів і вивести кожне слово в окремому рядку за допомогою циклу for і for..of.
+
+// const str = 'JavaScript, HTML, CSS, React';
+
+// const arr = str.split(', ');
+
+
+
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+// for (const item of arr) {
+//     console.log(item);
+// }
+
+//TODO:=========task-2=================
+// Порахуй кількість слів у рядку, використовуючи методи масивів і створи новий рядок, роділений дефісами у нижньому регістрі.
+
+const message = 'JavaScript is a popular programming language.';
+
+// const arr = message.split(' ');
+// const arrayLength = arr.length;
+// console.log(arr.length);
+
+// let newMessage = arr.join('-');
+
+// newMessage = newMessage.toLowerCase();
+
+// console.log(newMessage);
+
+const result = message.toLowerCase().split(' ').join('-');
+console.log(result);g
