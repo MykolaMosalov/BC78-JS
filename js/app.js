@@ -111,4 +111,4 @@ const message = 'JavaScript is a popular programming language.';
 // console.log(newMessage);
 
 const result = message.toLowerCase().split(' ').join('-');
-console.log(result);g
+console.log(result);
