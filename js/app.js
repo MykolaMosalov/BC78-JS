@@ -123,14 +123,30 @@
 // Результат повинен бути розділений комами та пробілами.
 // (використати indexOf)
 
-const wordsArray = ["JavaScript", "HTML", "CSS", "React"];
-const substring = "H";
-const newArray = [];
-for (const word of wordsArray) {
-  if (word.includes(substring)) {
-    newArray.push(word);
+// const wordsArray = ["JavaScript", "HTML", "CSS", "React"];
+// const substring = "H";
+// const newArray = [];
+// for (const word of wordsArray) {
+//   if (word.includes(substring)) {
+//     newArray.push(word);
+//   }
+// }
+// console.log(
+//   `Масив елементів, що містять підстроку ${substring}: ${newArray.join(", ")}`
+// );
+
+//TODO:=========task-5=================
+// Створити масив з 10-ти чисел. Напиши функцію яуа буде шукати найбільше число.
+
+const numberArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+function fintMaxNumber(numberArray) {
+  let total = numberArray[0];
+  for (const number of numberArray) {
+    if (number > total) {
+      total = number;
+    }
   }
+  return total;
 }
-console.log(
-  `Масив елементів, що містять підстроку ${substring}: ${newArray.join(", ")}`
-);
+
+console.log(fintMaxNumber(numberArray));
