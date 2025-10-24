@@ -91,10 +91,60 @@ function findSmallerNumber(numbers = []) {
 //Нумерація елементів має починатися з першого.
 //['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп']
 
-function logItems(array) {
-  for (let i = 0; i < array.length; i++) {
-    console.log(`${i + 1} - ${array[i]}`);
+// function logItems(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     console.log(`${i + 1} - ${array[i]}`);
+//   }
+// }
+
+// logItems(["Джаз", "Блюз", "Рок-н-рол", "Реггі", "Реп"]);
+
+//TODO:=============task-04=================
+// напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
+
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// function sumSibling(arr) {
+//   const res = [];
+//   for (let i = 0; i < arr.length - 1; i += 1) {
+//     res.push(arr[i] + arr[i + 1]);
+//   }
+//   //     if (i === 0) {
+//   //       res.push(arr[i] + arr[i + 1]);
+//   //       continue;
+//   //     }
+//   //     if (i === arr.length - 1) {
+//   //       res.push(arr[i] + arr[i - 1]);
+//   //       continue;
+//   //     }
+//   //     res.push(arr[i] + arr[i - 1] + arr[i + 1]);
+//   //   }
+//   return res;
+// }
+
+// console.log(sumSibling(someArr));
+
+//TODO:=========task-05=================
+//Напишіть функцію calculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+
+function calculateAverage() {
+  let res = 0;
+  let count = arguments.length;
+  for (const num of arguments) {
+    if (typeof num !== "number") {
+      count--;
+      continue;
+    }
+    res += num;
   }
+
+  return count !== 0 ? res / count : "no one is number";
 }
 
-logItems(["Джаз", "Блюз", "Рок-н-рол", "Реггі", "Реп"]);
+console.log(calculateAverage(1, 4, 3, 2, 5));
+console.log(calculateAverage(1, 4, 3, "4", 5));
+console.log(calculateAverage("1", "4", "3", "4"));
+console.log(calculateAverage(0, 0, 0, 0, 0));
