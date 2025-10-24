@@ -13,23 +13,23 @@
 //яка шукає найменше число в масиві.
 //Додай перевірку що функція отримує масив
 
-const numbers = [2, 5, 35, 56, 12, 1, 24, 7, 80, 3];
+// const numbers = [2, 5, 35, 56, 12, 1, 24, 7, 80, 3];
 
-function findSmallerNumber(numbers = []) {
-  if (!Array.isArray(numbers)) return "Arguments not a array";
+// function findSmallerNumber(numbers = []) {
+//   if (!Array.isArray(numbers)) return "Arguments not a array";
 
-  let smallNumber = numbers[0];
+//   let smallNumber = numbers[0];
 
-  for (const number of numbers) {
-    if (number < smallNumber) {
-      smallNumber = number;
-    }
-  }
+//   for (const number of numbers) {
+//     if (number < smallNumber) {
+//       smallNumber = number;
+//     }
+//   }
 
-  return smallNumber;
+//return smallNumber;
 
-  // return Math.min(...numbers);
-}
+// return Math.min(...numbers);
+//}
 
 // console.log(findSmallerNumber(numbers));
 // console.log(findSmallerNumber(10, 59, 60));
@@ -130,21 +130,43 @@ function findSmallerNumber(numbers = []) {
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа.
 
-function calculateAverage() {
-  let res = 0;
-  let count = arguments.length;
-  for (const num of arguments) {
-    if (typeof num !== "number") {
-      count--;
-      continue;
-    }
-    res += num;
-  }
+// function calculateAverage() {
+//   let res = 0;
+//   let count = arguments.length;
+//   for (const num of arguments) {
+//     if (typeof num !== "number") {
+//       count--;
+//       continue;
+//     }
+//     res += num;
+//   }
 
-  return count !== 0 ? res / count : "no one is number";
-}
+//   return count !== 0 ? res / count : "no one is number";
+// }
 
-console.log(calculateAverage(1, 4, 3, 2, 5));
-console.log(calculateAverage(1, 4, 3, "4", 5));
-console.log(calculateAverage("1", "4", "3", "4"));
-console.log(calculateAverage(0, 0, 0, 0, 0));
+//console.log(calculateAverage(1, 4, 3, 2, 5));
+//console.log(calculateAverage(1, 4, 3, "4", 5));
+//console.log(calculateAverage("1", "4", "3", "4"));
+// console.log(calculateAverage(0, 0, 0, 0, 0));
+
+//TODO:============task-06=========================
+// Знайти перший парний елемент масиву, який більший за 10, використовуючи цикл for з оператором break та continue.
+
+// const numbers = [5, 11, 21, 87, 7, 15, 11, 11];
+
+// function ovenNum(arr) {
+//   let result = null;
+//   for (const num of numbers) {
+//     if (num <= 10 || num % 2 !== 0) {
+//       continue;
+//     }
+//     result = num;
+//     break;
+//   }
+//   // if (result == undefined) {
+//   //   return "В масиві немає парних чисел";
+//   // }
+
+//   return result === null ? "В масиві немає парних чисел" : result;
+// }
+// console.log(ovenNum(numbers));
