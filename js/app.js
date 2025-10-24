@@ -16,7 +16,7 @@
 const numbers = [2, 5, 35, 56, 12, 1, 24, 7, 80, 3];
 
 function findSmallerNumber(numbers = []) {
-  if (!Array.isArray(numbers)) return 'Arguments not a array';
+  if (!Array.isArray(numbers)) return "Arguments not a array";
 
   let smallNumber = numbers[0];
 
@@ -34,3 +34,51 @@ function findSmallerNumber(numbers = []) {
 // console.log(findSmallerNumber(numbers));
 // console.log(findSmallerNumber(10, 59, 60));
 // console.log(findSmallerNumber());
+
+//TODO:============task-02==============
+// Напишіть функцію min(a, b), яка повертає
+// менше з чисел a, b
+// Потрібно додати перевірку, що функція отримує числа
+
+// function min(a, b) {
+//   // if (typeof a !== "number" || typeof b !== "number") {
+//   //   return "Невірні значення";
+//   // }
+
+//   // if (a > b) {
+//   //   return b;
+//   // } else if (b > a) {
+//   //   return a;
+//   // } else if ((a = b)) {
+//   //   return "a=b";
+//   // }
+//   if (a === undefined || b === undefined) {
+//     return "Передано лише один аргумент";
+//   }
+//   if (typeof a !== "number" || typeof b !== "number") {
+//     return "Невірні значення";
+//   }
+
+//   if (a === b) {
+//     return "Аргументи рівні";
+//   }
+
+//   return a < b ? a : b;
+// }
+
+// function min(a, b) {
+//   if (typeof a === "number" && typeof b === "number") {
+//     if (a === b) {
+//       return "Числа равны";
+//     }
+//     return a > b ? b : a;
+//   } else {
+//     return "неправильные значения";
+//   }
+// }
+// console.log(min(5));
+// console.log(min("gfd", "dhdh"));
+// console.log(min(null, true));
+// console.log(min(5, 3));
+// console.log(min(5, 5));
+// console.log(min(5, "fsg"));
