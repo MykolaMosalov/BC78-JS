@@ -116,3 +116,64 @@
 //   }
 //   return sum;
 // }
+
+//TODO:============task-3======================================================
+// Створіть функцію multiplyNumeric(obj),
+// яка множить всі числові властивості об'єкта obj на 2.
+
+// до виклику функції
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu",
+// };
+
+// після виклику функції
+// menu = {
+//   width: 400,
+//   height: 600,
+//   title: 'My menu',
+// };
+
+// function multiplyNumeric(obj) {
+//   for (const key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] *= 2;
+//     }
+//   }
+
+//   return obj;
+// }
+
+// console.log(multiplyNumeric(menu));
+
+//TODO:===============task-04===============================
+// Даний словник із міст та дат виступів рок-групи
+// Необхідно перетворити словник (key-value) на масив із назв міст
+// Виведення міст має бути у хронологічному порядку
+// Міста у яких концерт вже пройшов потрібно виключити
+// Результат ["Умань", "Харків", "Одеса"]
+
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2025-12-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Харків: new Date("2025-12-10"),
+//   Одеса: new Date("2025-12-15"),
+//   Хмельницький: new Date("2020-04-18"),
+// };
+
+// console.log(getUnfinishedConcerts(concerts));
+
+// function getUnfinishedConcerts(obj) {
+//   const resArr = [];
+//   const currentDate = new Date();
+
+//   for (const key in obj) {
+//     if (obj[key] > currentDate) {
+//       resArr.push(key);
+//     }
+//   }
+
+//   return resArr;
+// }
