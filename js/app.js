@@ -177,3 +177,21 @@
 
 //   return resArr;
 // }
+
+//TODO:============task-5======================================================
+// Напишіть функцію, яка приймає як параметр об'єкт
+// та формує об'єкти у новому масиві у форматі [key, value]
+
+// const user = {
+//   name: "John",
+//   surName: "Stones",
+//   age: 20,
+//   hobby: "tenis",
+//   haveCar: true,
+//   merried: false,
+// };
+
+// function createEntriesArray(user) {
+//   return Object.entries(user);
+// }
+// console.log(createEntriesArray(user));
