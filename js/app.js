@@ -195,3 +195,25 @@
 //   return Object.entries(user);
 // }
 // console.log(createEntriesArray(user));
+
+//TODO:============task-6==============================================
+// Створіть об'єкт "магазин" зі списком товарів. Напишіть метод "hasProduct", який буде перевіряти, чи є певний товар в наявності на складі магазину.
+
+// const store = {
+//   products: [],
+
+//   addProduct(product) {
+//     this.products.push(product);
+//     console.log(this.products);
+//   },
+
+//   hasProduct(product) {
+//     return this.products.includes(product);
+//   },
+// };
+
+// store.addProduct('Orange');
+// store.addProduct('Tomato');
+// store.addProduct('Banana');
+
+// console.log(store.hasProduct('Apple'));
