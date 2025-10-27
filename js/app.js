@@ -61,3 +61,26 @@
 // }
 
 // console.log(total);
+
+//TODO:============task-1======================================================
+// Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
+// Якщо об'єкт має такий ключ - поверне true
+// Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
+
+// function newObj(obj, key) {
+// for (const keys in obj) {
+//   if (keys === key) return true;
+// }
+// return false;
+
+// const arrayKeys = Object.keys(obj);
+// return arrayKeys.includes(key);
+// for (const keys of arrayKeys) {
+//   if (keys === key) return true;
+// }
+// return false;
+
+//   return key in obj;
+// }
+// console.log(newObj({ a: 1, b: 2 }, "c"));
+// console.log(newObj({ a: 1, b: 2 }, "a"));
