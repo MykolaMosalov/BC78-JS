@@ -84,3 +84,35 @@
 // }
 // console.log(newObj({ a: 1, b: 2 }, "c"));
 // console.log(newObj({ a: 1, b: 2 }, "a"));
+
+//TODO:============task-2======================================================
+// У нас є об'єкт, у якому зберігатимуться зарплати
+// нашої команди
+// Напишіть код для сумування всіх зарплат і
+// збережіть його результат у змінній sum.
+// Якщо об'єкт salaries порожній, то результат має бути 0
+
+// const salaries = {
+//   Vlad: 10000,
+//   Dima: 20000,
+//   Lera: 15000,
+// };
+
+// // function sumSalaries(salaries) {
+// //   let sum = 0;
+// //   for (const value of Object.values(salaries)) {
+// //     sum += value;
+// //   }
+// //   return sum;
+// // }
+
+// console.log(sumSalaries(salaries));
+// console.log(sumSalaries({}));
+
+// function sumSalaries(salaries) {
+//   let sum = 0;
+//   for (const key in salaries) {
+//     sum += salaries[key];
+//   }
+//   return sum;
+// }
