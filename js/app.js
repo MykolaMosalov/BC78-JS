@@ -4,21 +4,21 @@
 // Операції spread і rest
 
 const users = [
-  {
-    userName: "Bob",
-    age: 29,
-    isActive: true,
-  },
-  {
-    userName: "Mango",
-    age: 33,
-    isActive: false,
-  },
-  {
-    userName: "Jon",
-    age: 20,
-    isActive: true,
-  },
+    {
+        userName: "Bob",
+        age: 29,
+        isActive: true,
+    },
+    {
+        userName: "Mango",
+        age: 33,
+        isActive: false,
+    },
+    {
+        userName: "Jon",
+        age: 20,
+        isActive: true,
+    },
 ];
 
 // console.log(users);
@@ -26,17 +26,17 @@ const users = [
 const usersNameArray = [];
 
 for (const item of users) {
-  usersNameArray.push(item.userName);
+    usersNameArray.push(item.userName);
 }
 
 // console.log(usersNameArray);
 
 const obj = {
-  products: [],
+    products: [],
 
-  addProducts() {},
+    addProducts() {},
 
-  showProducts() {},
+    showProducts() {},
 };
 
 function fn() {}
@@ -46,16 +46,16 @@ function fn() {}
 // console.log(fn());
 
 const user = {
-  userName: "Bob",
-  age: 30,
+    userName: "Bob",
+    age: 30,
 
-  showName() {
-    return `Hello im ${this.userName}`;
-  },
+    showName() {
+        return `Hello im ${this.userName}`;
+    },
 };
 
 function sayHello(name) {
-  return name;
+    return name;
 }
 
 const human = Object.create(user);
@@ -68,21 +68,21 @@ human.sayHello = sayHello;
 
 // console.log(user.showName());
 
-// const newObj = { ...user };
-// console.log(newObj);
+// // const newObj = { ...user };
+// // console.log(newObj);
 
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [6, 7, 8, 9, 10];
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [6, 7, 8, 9, 10];
 
-// const newArr = arr1.concat(arr2);
-// console.log(newArr);
+// // const newArr = arr1.concat(arr2);
+// // console.log(newArr);
 
-const newArr = [...arr1, ...arr2];
-// console.log(newArr);
+// const newArr = [...arr1, ...arr2];
+// // console.log(newArr);
 
-function findMaxNumber(...args) {
-  return Math.max(...args);
-}
+// function findMaxNumber(...args) {
+//     return Math.max(...args);
+// }
 
 // console.log(findMaxNumber(29, 49, 90, 200));
 
@@ -129,37 +129,62 @@ function findMaxNumber(...args) {
 //  Методи повинні спрацьовувати при натисканні на кнопки “поповнити рахунок”
 // та отримати ‘готівку’ відповідно.Після проведення операції виводити повідомлення про залишок на рахунку.
 
-const bankAccount = {
-  ownerName: "",
-  accountNumber: "",
-  balance: 0,
-  deposit(value) {
-    this.balance += value;
-    console.log(
-      `your balance is replenishment to ${value}. current balance: ${this.balance}`
-    );
-  },
-  withdraw(value) {
-    return value <= this.balance
-      ? `your balance decrease to ${value}. current balance: ${(this.balance -=
-          value)}`
-      : "Insufficient funds in your account.";
-  },
-};
+// const bankAccount = {
+//   ownerName: "",
+//   accountNumber: "",
+//   balance: 0,
+//   deposit(value) {
+//     this.balance += value;
+//     console.log(
+//       `your balance is replenishment to ${value}. current balance: ${this.balance}`
+//     );
+//   },
+//   withdraw(value) {
+//     return value <= this.balance
+//       ? `your balance decrease to ${value}. current balance: ${(this.balance -=
+//           value)}`
+//       : "Insufficient funds in your account.";
+//   },
+// };
 
-// console.log(bankAccount.deposit(500));
-// console.log(bankAccount.withdraw(300));
-// console.log(bankAccount.withdraw(20000));
+// // console.log(bankAccount.deposit(500));
+// // console.log(bankAccount.withdraw(300));
+// // console.log(bankAccount.withdraw(20000));
 
-const artem = Object.create(bankAccount);
-artem.ownerName = "Artem";
-artem.accountNumber = 1;
-artem.deposit(5000);
-console.log(artem.withdraw(3000));
-console.log(artem);
+// const artem = Object.create(bankAccount);
+// artem.ownerName = "Artem";
+// artem.accountNumber = 1;
+// artem.deposit(5000);
+// console.log(artem.withdraw(3000));
+// console.log(artem);
 
-const mykola = Object.create(bankAccount);
-mykola.ownerName = "Mykola";
-mykola.accountNumber = 2;
-mykola.deposit(10000);
-console.log(mykola);
+// const mykola = Object.create(bankAccount);
+// mykola.ownerName = "Mykola";
+// mykola.accountNumber = 2;
+// mykola.deposit(10000);
+// console.log(mykola);
+
+// * Операції spread і rest
+//TODO:============task-1=========================
+// Припустимо, є два масиви об'єктів:
+// Необхідно створити новий масив об'єктів, що буде містити всі об'єкти з обох масивів, але без дублів.
+// Тобто об'єкти з однаковим значенням ключа "id" повинні бути об'єднані в один об'єкт.
+
+const arr1 = [
+    { id: 1, name: "John" },
+    { id: 2, name: "Mary" },
+    { id: 3, name: "Bob" },
+];
+
+const arr2 = [
+    { id: 2, name: "Mary" },
+    { id: 4, name: "Jane" },
+    { id: 5, name: "Tom" },
+];
+
+const newArr = [...arr1, ...arr2];
+const newObj = {};
+for (const item of newArr) {
+    newObj[item.id] = item;
+}
+// console.log(Object.values(newObj));
