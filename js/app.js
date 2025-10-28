@@ -5,17 +5,17 @@
 
 const users = [
   {
-    userName: "Bob",
+    userName: 'Bob',
     age: 29,
     isActive: true,
   },
   {
-    userName: "Mango",
+    userName: 'Mango',
     age: 33,
     isActive: false,
   },
   {
-    userName: "Jon",
+    userName: 'Jon',
     age: 20,
     isActive: true,
   },
@@ -46,7 +46,7 @@ function fn() {}
 // console.log(fn());
 
 const user = {
-  userName: "Bob",
+  userName: 'Bob',
   age: 30,
 
   showName() {
@@ -59,7 +59,7 @@ function sayHello(name) {
 }
 
 const human = Object.create(user);
-human.userName = "Mango";
+human.userName = 'Mango';
 human.sayHello = sayHello;
 
 // console.log(human.showName());
@@ -246,3 +246,38 @@ human.sayHello = sayHello;
 //     { name: "Ірина", surname: "Федорова", grade: 4.1 },
 //   ])
 // );
+
+//TODO:============task-2==================================================
+// Створіть масив об'єктів "книг" з властивостями "назва", "автор" та "рік видання". Напишіть функцію "findBooksByAuthor",
+//яка буде повертати масив книг відповідного автора.
+
+const books = [
+  { title: 'Війна і мир', author: 'Лев Толстой', year: 1869 },
+  {
+    title: 'Преступление и наказание',
+    author: 'Федор Достоевский',
+    year: 1866,
+  },
+  {
+    title: 'Гаррі Поттер і філософський камінь',
+    author: 'Джоан Роулінг',
+    year: 1997,
+  },
+  { title: 'Мастер и Маргарита', author: 'Михаил Булгаков', year: 1967 },
+  { title: '1984', author: 'Джордж Оруелл', year: 1949 },
+];
+
+function findBooksByAuthor(arr, author) {
+  let newArr = [];
+
+  for (const item of arr) {
+    if (item.author === author) {
+      newArr.push(item);
+    }
+  }
+
+  return newArr;
+}
+
+console.log(findBooksByAuthor(books, 'Джордж Оруелл'));
+console.log(findBooksByAuthor(books, 'Лев Толстой'));
