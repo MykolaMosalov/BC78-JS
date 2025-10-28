@@ -5,17 +5,17 @@
 
 const users = [
   {
-    userName: 'Bob',
+    userName: "Bob",
     age: 29,
     isActive: true,
   },
   {
-    userName: 'Mango',
+    userName: "Mango",
     age: 33,
     isActive: false,
   },
   {
-    userName: 'Jon',
+    userName: "Jon",
     age: 20,
     isActive: true,
   },
@@ -46,7 +46,7 @@ function fn() {}
 // console.log(fn());
 
 const user = {
-  userName: 'Bob',
+  userName: "Bob",
   age: 30,
 
   showName() {
@@ -59,7 +59,7 @@ function sayHello(name) {
 }
 
 const human = Object.create(user);
-human.userName = 'Mango';
+human.userName = "Mango";
 human.sayHello = sayHello;
 
 // console.log(human.showName());
@@ -85,3 +85,39 @@ function findMaxNumber(...args) {
 }
 
 // console.log(findMaxNumber(29, 49, 90, 200));
+
+// * Свторення методів обєкту
+//TODO:============task-1==============================================
+// Створіть об'єкт "прямокутник" з властивостями "довжина" та "ширина".
+//Напишіть метод "calculateArea", який буде обчислювати площу прямокутника на основі його довжини
+//та ширини.
+
+// const square = {
+//   width: 2,
+//   high: 3,
+
+//   calculateArea() {
+//     return this.width * this.high;
+//   },
+// };
+
+// console.log(square.calculateArea());
+
+//TODO:============task-2==============================================
+// 4. Створіть об'єкт "кошик" зі списком товарів та їх цін. Напишіть метод "calculateTotal", який буде обчислювати загальну суму товарів у кошику.
+
+const storeProducts = {
+  items: [
+    { name: "laptop", price: 5000 },
+    { name: "phone", price: 2500 },
+  ],
+  calculateTotal() {
+    let totalPrice = 0;
+    for (const item of this.items) {
+      totalPrice += item.price;
+    }
+    return totalPrice;
+  },
+};
+
+console.log(storeProducts.calculateTotal());
