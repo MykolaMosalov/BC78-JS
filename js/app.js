@@ -4,21 +4,21 @@
 // Операції spread і rest
 
 const users = [
-    {
-        userName: "Bob",
-        age: 29,
-        isActive: true,
-    },
-    {
-        userName: "Mango",
-        age: 33,
-        isActive: false,
-    },
-    {
-        userName: "Jon",
-        age: 20,
-        isActive: true,
-    },
+  {
+    userName: "Bob",
+    age: 29,
+    isActive: true,
+  },
+  {
+    userName: "Mango",
+    age: 33,
+    isActive: false,
+  },
+  {
+    userName: "Jon",
+    age: 20,
+    isActive: true,
+  },
 ];
 
 // console.log(users);
@@ -26,17 +26,17 @@ const users = [
 const usersNameArray = [];
 
 for (const item of users) {
-    usersNameArray.push(item.userName);
+  usersNameArray.push(item.userName);
 }
 
 // console.log(usersNameArray);
 
 const obj = {
-    products: [],
+  products: [],
 
-    addProducts() {},
+  addProducts() {},
 
-    showProducts() {},
+  showProducts() {},
 };
 
 function fn() {}
@@ -46,16 +46,16 @@ function fn() {}
 // console.log(fn());
 
 const user = {
-    userName: "Bob",
-    age: 30,
+  userName: "Bob",
+  age: 30,
 
-    showName() {
-        return `Hello im ${this.userName}`;
-    },
+  showName() {
+    return `Hello im ${this.userName}`;
+  },
 };
 
 function sayHello(name) {
-    return name;
+  return name;
 }
 
 const human = Object.create(user);
@@ -171,20 +171,45 @@ human.sayHello = sayHello;
 // Тобто об'єкти з однаковим значенням ключа "id" повинні бути об'єднані в один об'єкт.
 
 const arr1 = [
-    { id: 1, name: "John" },
-    { id: 2, name: "Mary" },
-    { id: 3, name: "Bob" },
+  { id: 1, name: "John" },
+  { id: 2, name: "Mary" },
+  { id: 3, name: "Bob" },
 ];
 
 const arr2 = [
-    { id: 2, name: "Mary" },
-    { id: 4, name: "Jane" },
-    { id: 5, name: "Tom" },
+  { id: 2, name: "Mary" },
+  { id: 4, name: "Jane" },
+  { id: 5, name: "Tom" },
 ];
 
 const newArr = [...arr1, ...arr2];
 const newObj = {};
 for (const item of newArr) {
-    newObj[item.id] = item;
+  newObj[item.id] = item;
 }
 // console.log(Object.values(newObj));
+
+//TODO:============task-2=========================
+// Напишіть функцію updateObject, яка приймає об'єкт та повертає
+// новий об'єкт без зазначених параметрів
+// Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
+
+// function updateObject(obj, ...toDelete) {
+//   let newObj = {};
+//   for (const key in obj) {
+//     // console.log(toDelete.includes(key));
+//     if (!toDelete.includes(key)) {
+//       newObj[key] = obj[key];
+//     }
+//   }
+//   return newObj;
+// }
+
+function updateObject(obj, ...toDelete) {
+  for (const item of toDelete) {
+    delete obj[item];
+  }
+  return obj;
+}
+
+console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "a"));
