@@ -121,3 +121,45 @@ function findMaxNumber(...args) {
 // };
 
 // console.log(storeProducts.calculateTotal());
+
+//TODO:============task-3==============================================
+// Створіть об'єкт "bankAccount" з властивостями "ownerName", "accountNumber", "balance".
+//  Додайте до об'єкту метод "deposit", який дозволяє додавати гроші на рахунок,
+//  та метод "withdraw", який дозволяє знімати гроші з рахунку.
+//  Методи повинні спрацьовувати при натисканні на кнопки “поповнити рахунок”
+// та отримати ‘готівку’ відповідно.Після проведення операції виводити повідомлення про залишок на рахунку.
+
+const bankAccount = {
+  ownerName: "",
+  accountNumber: "",
+  balance: 0,
+  deposit(value) {
+    this.balance += value;
+    console.log(
+      `your balance is replenishment to ${value}. current balance: ${this.balance}`
+    );
+  },
+  withdraw(value) {
+    return value <= this.balance
+      ? `your balance decrease to ${value}. current balance: ${(this.balance -=
+          value)}`
+      : "Insufficient funds in your account.";
+  },
+};
+
+// console.log(bankAccount.deposit(500));
+// console.log(bankAccount.withdraw(300));
+// console.log(bankAccount.withdraw(20000));
+
+const artem = Object.create(bankAccount);
+artem.ownerName = "Artem";
+artem.accountNumber = 1;
+artem.deposit(5000);
+console.log(artem.withdraw(3000));
+console.log(artem);
+
+const mykola = Object.create(bankAccount);
+mykola.ownerName = "Mykola";
+mykola.accountNumber = 2;
+mykola.deposit(10000);
+console.log(mykola);
