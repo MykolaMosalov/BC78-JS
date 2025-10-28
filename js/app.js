@@ -170,23 +170,23 @@ human.sayHello = sayHello;
 // Необхідно створити новий масив об'єктів, що буде містити всі об'єкти з обох масивів, але без дублів.
 // Тобто об'єкти з однаковим значенням ключа "id" повинні бути об'єднані в один об'єкт.
 
-const arr1 = [
-  { id: 1, name: "John" },
-  { id: 2, name: "Mary" },
-  { id: 3, name: "Bob" },
-];
+// const arr1 = [
+//   { id: 1, name: "John" },
+//   { id: 2, name: "Mary" },
+//   { id: 3, name: "Bob" },
+// ];
 
-const arr2 = [
-  { id: 2, name: "Mary" },
-  { id: 4, name: "Jane" },
-  { id: 5, name: "Tom" },
-];
+// const arr2 = [
+//   { id: 2, name: "Mary" },
+//   { id: 4, name: "Jane" },
+//   { id: 5, name: "Tom" },
+// ];
 
-const newArr = [...arr1, ...arr2];
-const newObj = {};
-for (const item of newArr) {
-  newObj[item.id] = item;
-}
+// const newArr = [...arr1, ...arr2];
+// const newObj = {};
+// for (const item of newArr) {
+//   newObj[item.id] = item;
+// }
 // console.log(Object.values(newObj));
 
 //TODO:============task-2=========================
@@ -205,11 +205,44 @@ for (const item of newArr) {
 //   return newObj;
 // }
 
-function updateObject(obj, ...toDelete) {
-  for (const item of toDelete) {
-    delete obj[item];
-  }
-  return obj;
-}
+// function updateObject(obj, ...toDelete) {
+//   for (const item of toDelete) {
+//     delete obj[item];
+//   }
+//   return obj;
+// }
 
-console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "a"));
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "a"));
+
+// * Робота з масивом об'єктів
+//TODO:============task-1==============================
+// Створіть масив об'єктів "студентів" з властивостями "ім'я", "прізвище" та "середній бал".
+// Напишіть функцію "findTopStudent", яка буде повертати об'єкт студента з найвищим середнім балом.
+
+// const students = [
+//   { name: "Андрій", surname: "Іванов", grade: 4.5 },
+//   { name: "Олександр", surname: "Петров", grade: 3.9 },
+//   { name: "Марія", surname: "Сидорова", grade: 4.8 },
+//   { name: "Ірина", surname: "Федорова", grade: 4.2 },
+// ];
+
+// function findTopStudent(arr) {
+//   let topStudent = arr[0];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].grade > topStudent.grade) {
+//       topStudent = arr[i];
+//     }
+//   }
+//   return topStudent;
+// }
+
+// console.log(findTopStudent(students));
+// console.log(
+//   findTopStudent([
+//     { name: "Андрій", surname: "Іванов", grade: 4.9 },
+//     { name: "Олександр", surname: "Петров", grade: 3.9 },
+//     { name: "Марія", surname: "Сидорова", grade: 4.5 },
+//     { name: "Ірина", surname: "Федорова", grade: 4.1 },
+//   ])
+// );
