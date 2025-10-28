@@ -106,18 +106,18 @@ function findMaxNumber(...args) {
 //TODO:============task-2==============================================
 // 4. Створіть об'єкт "кошик" зі списком товарів та їх цін. Напишіть метод "calculateTotal", який буде обчислювати загальну суму товарів у кошику.
 
-const storeProducts = {
-  items: [
-    { name: "laptop", price: 5000 },
-    { name: "phone", price: 2500 },
-  ],
-  calculateTotal() {
-    let totalPrice = 0;
-    for (const item of this.items) {
-      totalPrice += item.price;
-    }
-    return totalPrice;
-  },
-};
+// const storeProducts = {
+//   items: [
+//     { name: "laptop", price: 5000 },
+//     { name: "phone", price: 2500 },
+//   ],
+//   calculateTotal() {
+//     let totalPrice = 0;
+//     for (const item of this.items) {
+//       totalPrice += item.price;
+//     }
+//     return `Сумма до сплати: ${totalPrice} $`;
+//   },
+// };
 
-console.log(storeProducts.calculateTotal());
+// console.log(storeProducts.calculateTotal());
