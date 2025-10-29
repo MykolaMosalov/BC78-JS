@@ -158,30 +158,93 @@
 //TODO:============task-08=========================
 // Перевірити два масиву і дізнатися, чи вони рівні
 
-//* Оцікуваний результат - true, true, false, false
-const arr1 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
-const arr2 = [6, "dream", -30, 11, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
-const arr3 = [4, 232, 6, -30, "color", 324, "list", 1, 11, 9, "dream", 34, 0];
-const arr4 = ["color", 6, -30, 11, 9, 1, "dream", 324, 34, 4, 232, 0, "list"];
-const arr5 = [1, 4, 6, "color", "list", 11, 9, "dream", 34, 0, -30, "lesson"];
-const arr6 = [6, 324, "dream", -30, 9, 8, 34, "color", 4, 232, 0, "list", 11];
-const arr7 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
-const arr8 = [6, "dream", -30, 10, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
+// //* Оцікуваний результат - true, true, false, false
+// const arr1 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
+// const arr2 = [6, "dream", -30, 11, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
+// const arr3 = [4, 232, 6, -30, "color", 324, "list", 1, 11, 9, "dream", 34, 0];
+// const arr4 = ["color", 6, -30, 11, 9, 1, "dream", 324, 34, 4, 232, 0, "list"];
+// const arr5 = [1, 4, 6, "color", "list", 11, 9, "dream", 34, 0, -30, "lesson"];
+// const arr6 = [6, 324, "dream", -30, 9, 8, 34, "color", 4, 232, 0, "list", 11];
+// const arr7 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
+// const arr8 = [6, "dream", -30, 10, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
 
-function compareArrays(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+// function compareArrays(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
 
-  for (const char of arr1) {
-    if (!arr2.includes(char)) {
-      return false;
+//   for (const char of arr1) {
+//     if (!arr2.includes(char)) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(compareArrays(arr1, arr2)); // true
+// console.log(compareArrays(arr3, arr4)); // true
+// console.log(compareArrays(arr5, arr6)); // false
+// console.log(compareArrays(arr7, arr8)); // false
+
+//TODO:============task-8==================================================
+// Створіть масив об'єктів "продуктів" з властивостями "назва", "ціна" та "кількість".
+// Напишіть функцію "calculateTotalPrice", яка буде повертати загальну вартість всіх товарів в масиві.
+
+// //* Оцікуваний результат - store1=> 25, store2=> 304, store3=> 3024
+// const store = [
+//   { name: "Молоко", price: 2, quantity: 3 },
+//   { name: "Хліб", price: 1, quantity: 2 },
+//   { name: "Сир", price: 12, quantity: 1 },
+//   { name: "Яблука", price: 1, quantity: 5 },
+// ];
+// const store2 = [
+//   { name: "Молоко", price: 22, quantity: 3 },
+//   { name: "Хліб", price: 14, quantity: 2 },
+//   { name: "Сир", price: 120, quantity: 1 },
+//   { name: "Яблука", price: 18, quantity: 5 },
+// ];
+// const store3 = [
+//   { name: "Молоко", price: 212, quantity: 3 },
+//   { name: "Хліб", price: 314, quantity: 2 },
+//   { name: "Сир", price: 1120, quantity: 1 },
+//   { name: "Яблука", price: 128, quantity: 5 },
+// ];
+
+// function calculateTotalPrice(arr) {
+//   let totalPrice = 0;
+
+//   for (const { price, quantity } of arr) {
+//     totalPrice += price * quantity;
+//   }
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice(store));
+// console.log(calculateTotalPrice(store2));
+// console.log(calculateTotalPrice(store3));
+
+//TODO:============task-9=====================================
+// * Задача: є масив об'єктів, кожен об'єкт містить інформацію про певний товар: назву товару, його ціну та кількість.
+// * Необхідно вивести інформацію про ті товари, ціна яких менше 50 гривень та кількість більше 5 одиниць.
+
+const products = [
+  { name: "product 1", price: 20, quantity: 10 },
+  { name: "product 2", price: 30, quantity: 4 },
+  { name: "product 3", price: 40, quantity: 6 },
+  { name: "product 4", price: 50, quantity: 3 },
+  { name: "product 5", price: 60, quantity: 2 },
+];
+
+function checkProducts(arr, maxPrice, minQuant) {
+  const resArr = [];
+
+  for (const item of arr) {
+    const { price, quantity } = item;
+    if (price < maxPrice && quantity > minQuant) {
+      resArr.push(item);
     }
   }
-  return true;
+  return resArr;
 }
 
-console.log(compareArrays(arr1, arr2)); // true
-console.log(compareArrays(arr3, arr4)); // true
-console.log(compareArrays(arr5, arr6)); // false
-console.log(compareArrays(arr7, arr8)); // false
+console.log(checkProducts(products, 50, 5));
