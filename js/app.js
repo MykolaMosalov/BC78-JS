@@ -227,24 +227,83 @@
 // * Задача: є масив об'єктів, кожен об'єкт містить інформацію про певний товар: назву товару, його ціну та кількість.
 // * Необхідно вивести інформацію про ті товари, ціна яких менше 50 гривень та кількість більше 5 одиниць.
 
-const products = [
-  { name: "product 1", price: 20, quantity: 10 },
-  { name: "product 2", price: 30, quantity: 4 },
-  { name: "product 3", price: 40, quantity: 6 },
-  { name: "product 4", price: 50, quantity: 3 },
-  { name: "product 5", price: 60, quantity: 2 },
+// const products = [
+//   { name: "product 1", price: 20, quantity: 10 },
+//   { name: "product 2", price: 30, quantity: 4 },
+//   { name: "product 3", price: 40, quantity: 6 },
+//   { name: "product 4", price: 50, quantity: 3 },
+//   { name: "product 5", price: 60, quantity: 2 },
+// ];
+
+// function checkProducts(arr, maxPrice, minQuant) {
+//   const resArr = [];
+
+//   for (const item of arr) {
+//     const { price, quantity } = item;
+//     if (price < maxPrice && quantity > minQuant) {
+//       resArr.push(item);
+//     }
+//   }
+//   return resArr;
+// }
+
+// console.log(checkProducts(products, 50, 5));
+
+//!  Методи обьектів
+//TODO:============task-10===================================
+// Створіть об’єкт "user", який буде мати властивості "name", "email", "password".
+//  метод "login", який буде перевіряти правильність введеного email та password.
+// Використайте інпути для запису значень властивостей в об’єкт
+
+// const user = {
+//   name: "John",
+//   email: "JohnSmith@gmail.com",
+//   password: "19ds68GJ",
+//   login(email, password) {
+//     return email.toLowerCase() === this.email.toLowerCase() &&
+//       password === this.password
+//       ? "Авторизація пройшла успішно"
+//       : "Помилка авторизації! Перевірте правильність email та пароля.";
+//   },
+// };
+
+// const email = prompt("Введіть Ваш email");
+// const password = prompt("Введіть Ваш пароль");
+
+// alert(user.login(email, password));
+
+//TODO:=================task-11=============================
+// Напиши функцію яка приймає масив чисел і повертає новий масив, унікальних чисел, які не повторюються.
+
+const numbers = [
+  10,
+  10,
+  10,
+  2,
+  "a",
+  4,
+  7,
+  7,
+  6,
+  6,
+  "B",
+  4,
+  23,
+  22,
+  22,
+  111,
+  10,
+  "a",
 ];
 
-function checkProducts(arr, maxPrice, minQuant) {
-  const resArr = [];
+function getUniqueNumbers(arr) {
+  const obj = {};
 
   for (const item of arr) {
-    const { price, quantity } = item;
-    if (price < maxPrice && quantity > minQuant) {
-      resArr.push(item);
-    }
+    obj[item] = item;
   }
-  return resArr;
+
+  return Object.values(obj);
 }
 
-console.log(checkProducts(products, 50, 5));
+console.log(getUniqueNumbers(numbers));
