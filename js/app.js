@@ -113,3 +113,27 @@
 // }
 
 // console.log(createSubstring(string, length));
+
+//TODO:============task-06=========================
+// Написати функцію, яка приймає рядок і повертає кількість голосних літер у цьому рядку.
+
+const str = "This is a new line";
+const vowels = ["a", "e", "i", "o", "u"];
+
+function countVowels(str) {
+  let count = 0;
+
+  //   // for (let i = 0; i < str.length; i++) {
+  //   //   if (vowels.includes(str[i])) {
+  //   //     count++;
+  //   //   }
+  //   // }
+
+  for (const letter of str) vowels.includes(letter) && count++;
+  // {
+  //   count += Number(vowels.includes(letter));
+  // }
+  return count;
+}
+
+console.log(countVowels(str));
