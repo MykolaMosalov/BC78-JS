@@ -117,23 +117,40 @@
 //TODO:============task-06=========================
 // Написати функцію, яка приймає рядок і повертає кількість голосних літер у цьому рядку.
 
-const str = "This is a new line";
-const vowels = ["a", "e", "i", "o", "u"];
+// const str = "This is a new line";
+// const vowels = ["a", "e", "i", "o", "u"];
 
-function countVowels(str) {
-  let count = 0;
+// function countVowels(str) {
+//   let count = 0;
 
-  //   // for (let i = 0; i < str.length; i++) {
-  //   //   if (vowels.includes(str[i])) {
-  //   //     count++;
-  //   //   }
-  //   // }
+//   //   // for (let i = 0; i < str.length; i++) {
+//   //   //   if (vowels.includes(str[i])) {
+//   //   //     count++;
+//   //   //   }
+//   //   // }
 
-  for (const letter of str) vowels.includes(letter) && count++;
-  // {
-  //   count += Number(vowels.includes(letter));
-  // }
-  return count;
-}
+//   for (const letter of str) vowels.includes(letter) && count++;
+//   // {
+//   //   count += Number(vowels.includes(letter));
+//   // }
+//   return count;
+// }
 
-console.log(countVowels(str));
+// console.log(countVowels(str));
+
+//TODO:============task-07=========================
+// Перебрати числа від 10 до 30, вивести число 15 і зупинити цикл.
+// const min = 10;
+// const max = 30;
+
+// function serchNumber(min, max, number) {
+//   if (number < min || number > max) {
+//     return "Error!!!";
+//   }
+//   for (let i = min; i <= max; i++) {
+//     if (i === number) {
+//       return i;
+//     }
+//   }
+// }
+// console.log(serchNumber(min, max, 45));
