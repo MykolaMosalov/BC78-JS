@@ -85,3 +85,31 @@
 // } while (true);
 
 // alert(`Загальна сума введених чисел дорівнює ${total}.`);
+
+//TODO:============task-04=========================
+// Перевірте чи співпадає введений пароль password із збереженим паролем.
+// Присвой змінній isMatch вираз перевірки рівності введених і попередньо збережених паролів. Результатом виразу перевірки повинно бути true,
+// якщо значення збігаються, і false - якщо ні.
+
+// let newPwrd = prompt("type password");
+// function isMatchPassword(password) {
+//   const SAVED_PASSWORD = "12348765aA";
+//   return password === SAVED_PASSWORD;
+// }
+
+// alert(isMatchPassword(newPwrd));
+
+//TODO:============task-05=========================
+// Створи функцію createSubstring, яка буде створювати підрядок довжиною length символів (від початку) з рядка string.
+// string - оригінальний рядок
+// length - кількість символів з початку рядка для підрядка
+
+// const string =
+//   "Присвой змінній substring вираз створення підрядка довжиною length символів (від початку) з рядка string.";
+// const length = 25;
+
+// function createSubstring(string, length) {
+//   return string.slice(0, length) + "...";
+// }
+
+// console.log(createSubstring(string, length));
