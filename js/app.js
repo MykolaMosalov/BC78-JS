@@ -275,35 +275,83 @@
 //TODO:=================task-11=============================
 // Напиши функцію яка приймає масив чисел і повертає новий масив, унікальних чисел, які не повторюються.
 
-const numbers = [
-  10,
-  10,
-  10,
-  2,
-  "a",
-  4,
-  7,
-  7,
-  6,
-  6,
-  "B",
-  4,
-  23,
-  22,
-  22,
-  111,
-  10,
-  "a",
-];
+// const numbers = [
+//   10,
+//   10,
+//   10,
+//   2,
+//   'a',
+//   4,
+//   7,
+//   7,
+//   6,
+//   6,
+//   'B',
+//   4,
+//   23,
+//   22,
+//   22,
+//   111,
+//   10,
+//   'a',
+// ];
 
-function getUniqueNumbers(arr) {
-  const obj = {};
+// function getUniqueNumbers(arr) {
+//   const obj = {};
 
-  for (const item of arr) {
-    obj[item] = item;
-  }
+//   for (const item of arr) {
+//     obj[item] = item;
+//   }
 
-  return Object.values(obj);
-}
+//   return Object.values(obj);
+// }
 
-console.log(getUniqueNumbers(numbers));
+// function getUniqueNumbers(arr) {
+//   return [...new Set(arr)];
+// }
+
+// console.log(getUniqueNumbers(numbers));
+
+//! Паттерн «Об'єкт параметрів»
+// const data = {
+//   firstName: 'Bob',
+//   lastName: 'Romanov',
+//   age: 30,
+//   email: 'Test@mail.com',
+// };
+
+// function fn(obj = {}) {
+//   const { firstName, lastName, age, email } = obj;
+
+//   console.log(firstName);
+//   console.log(lastName);
+//   console.log(age);
+//   console.log(email);
+// }
+
+// console.log(fn());
+
+//! Замикання
+//TODO:====================task-01==========================
+// Напишіть функцію для зберігання знижки. Функція повертає:
+// Іншу функцію, яка приймає суму покупки
+// і повертає фінальну суму із збереженою знижкою.
+
+// function saveDiscount(discount) {
+//   return function makeDiscount(sum) {
+//     return sum - sum * (discount / 100);
+//   };
+// }
+
+// const silver = saveDiscount(5);
+// const gold = saveDiscount(15);
+// const premium = saveDiscount(20);
+
+// const user1 = silver(1000);
+// console.log(user1);
+
+// const user2 = gold(1000);
+// console.log(user2);
+
+// const user3 = premium(1000);
+// console.log(user3);
