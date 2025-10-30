@@ -95,3 +95,34 @@
 
 // console.log(MultiplicationOfNumbers(numbersArr));
 // console.log(numbersArr);
+
+//TODO:============task-03=========================
+// Напишіть функцію, яка приймає два числа і колбек-функцію. Функція повинна помножити числа між собою та передати результат дії до колбек-функції. Колбек-функція повинна, у разі, якщо, це число є парним - помножити це число на себе, якщо ні - взяти квадратний корінь з цього числа, та вивести результат у консоль лог.
+
+// const multiNumbers = (num1, num2, callback) => callback(num1 * num2);
+
+// const processingNum = (num) =>
+//   num % 2 === 0 ? Math.pow(num, 2) : Math.sqrt(num);
+
+// console.log(multiNumbers(2, 5, processingNum));
+// console.log(multiNumbers(3, 3, processingNum));
+
+//TODO:============task-04=========================
+//Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товару, а також callback.
+//Функція створює об'єкт товару, додаючи йому унікальний
+//ідентифікатор як id і викликає callback
+//Передаючи йому створений об'єкт.
+//showProduct(product) - коллбек приймаючий об'єкт
+//продукту і логірующий їх у консоль
+
+const makeProduct = (name, price, callback) => {
+  const objProduct = { id: Date.now(), name, price };
+  return callback(objProduct);
+};
+
+const showProduct = (product) =>
+  `id: ${product.id}, name: ${product.name}, price: ${product.price}`;
+
+console.log(makeProduct("apple", 12, showProduct));
