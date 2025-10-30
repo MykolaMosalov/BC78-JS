@@ -127,10 +127,6 @@
 
 // console.log(makeProduct("apple", 12, showProduct));
 
-
-
-
-
 //TODO:============task-05=========================
 //Напишіть функцію each(array, callback), яка
 //першим параметром приймає масив, а другим - функцію,
@@ -139,18 +135,34 @@
 //якого будуть результати виклику callback
 //callback функції повинна множити елементи на 2
 //! Використай анонімну колбєк функцію
-const numbers = [3, 5, 6, 34, 8, 83, 12, 34];
+// const numbers = [3, 5, 6, 34, 8, 83, 12, 34];
 
-function each(array, callback) {
-  const newArr = [];
+// function each(array, callback) {
+//   const newArr = [];
 
-  for (const item of array) {
-   newArr.push(callback(item));
-  
-  }
-  return newArr;
-}
+//   for (const item of array) {
+//    newArr.push(callback(item));
 
-console.log(each(numbers, number =>  number * 2));
+//   }
+//   return newArr;
+// }
 
+// console.log(each(numbers, number =>  number * 2));
 
+//TODO:============task-06=========================
+// Напишіть функцію, яка приймає масив чисел і колбек-функцію. Функція повинна повернути новий масив, у якому кожен елемент масиву перетворено згідно з логікою, яка визначається в колбек-функції. Колбек-функція приймає число, і повертає його ж, помножене на рандомне число від 1 до цього числа.
+
+// const numbers = [1, 2, 3, 4, 5];
+// function transformArray(arr, callback) {
+//   const newArray = [];
+//   arr.forEach((element) => {
+//     newArray.push(callback(element));
+//   });
+//   return newArray;
+// }
+
+// function transformNumbers(number) {
+//   return Math.round(Math.random() * number) + 1;
+// }
+
+// console.log(transformArray(numbers, transformNumbers));
