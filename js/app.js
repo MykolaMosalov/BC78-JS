@@ -117,12 +117,40 @@
 //showProduct(product) - коллбек приймаючий об'єкт
 //продукту і логірующий їх у консоль
 
-const makeProduct = (name, price, callback) => {
-  const objProduct = { id: Date.now(), name, price };
-  return callback(objProduct);
-};
+// const makeProduct = (name, price, callback) => {
+//   const objProduct = { id: Date.now(), name, price };
+//   return callback(objProduct);
+// };
 
-const showProduct = (product) =>
-  `id: ${product.id}, name: ${product.name}, price: ${product.price}`;
+// const showProduct = (product) =>
+//   `id: ${product.id}, name: ${product.name}, price: ${product.price}`;
 
-console.log(makeProduct("apple", 12, showProduct));
+// console.log(makeProduct("apple", 12, showProduct));
+
+
+
+
+
+//TODO:============task-05=========================
+//Напишіть функцію each(array, callback), яка
+//першим параметром приймає масив, а другим - функцію,
+//Яка застосовується до кожного елементу масиву.
+//Функція each повинна повернути новий масив, елементами
+//якого будуть результати виклику callback
+//callback функції повинна множити елементи на 2
+//! Використай анонімну колбєк функцію
+const numbers = [3, 5, 6, 34, 8, 83, 12, 34];
+
+function each(array, callback) {
+  const newArr = [];
+
+  for (const item of array) {
+   newArr.push(callback(item));
+  
+  }
+  return newArr;
+}
+
+console.log(each(numbers, number =>  number * 2));
+
+
