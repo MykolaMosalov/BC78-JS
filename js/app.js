@@ -91,3 +91,25 @@
 
 // const newArr2 = data.flatMap((num) => num.values);
 // console.log(newArr2);
+
+//TODO:=========task-03=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Перевірте, чи є хоча б один об'єкт з віком менше 20 років. Очікуваний результат: true.
+
+// const people = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 22 },
+// ];
+
+// const findAPerson = people.some((person) => person.age < 20);
+
+// console.log(findAPerson);
+
+//TODO:=========task-04=================
+//  Дано масив чисел [2, 4, 6, 8, 10]. Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
+
+// const numbers = [2, 4, 5, 8, 10];
+
+// const isEven = numbers.every((number) => number % 2 === 0);
+
+// console.log(isEven);
