@@ -113,3 +113,21 @@
 // const isEven = numbers.every((number) => number % 2 === 0);
 
 // console.log(isEven);
+
+//TODO:=========task-05=================
+// Знайдіть перше непарне число
+
+// const numbers = [2, 1, 6, 8, 9, 10, 12];
+
+// const firstOddNumber = numbers.find((number) => number % 2 !== 0);
+
+// console.log(firstOddNumber);
+
+// //TODO:=========task-06=================
+// // Дано масив чисел [1, 2, 3, 4, 5]. Знайдіть перший елемент, більший за 3. Очікуваний результат: 4.
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const requiredNum = arr.find((number) => number > 3);
+
+// console.log(requiredNum);
