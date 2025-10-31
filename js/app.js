@@ -134,16 +134,41 @@
 
 //TODO:=========task-07=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
-const array = [4, 2, 5, 1, 3];
+// const array = [4, 2, 5, 1, 3];
 
-const sort = (arr) => arr.toSorted((a, b) => a - b);
-console.log(sort(array));
+// const sort = (arr) => arr.toSorted((a, b) => a - b);
+// console.log(sort(array));
 
 //TODO:===============task-08===============================
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
-const strArr = ["banana", "orange", "apple", "pear"];
+// const strArr = ["banana", "orange", "apple", "pear"];
 
-const strSort = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
+// const strSort = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
 
-console.log(strSort(strArr));
+// console.log(strSort(strArr));
+
+//TODO:===============task-09===============================
+//  Відсортуйте масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19} за віком у порядку зростання. Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
+
+const users = [
+    { name: "John", age: 27 },
+    { name: "Jane", age: 31 },
+    { name: "Bob", age: 19 },
+];
+
+const newArr = users.toSorted((ageA, ageB) => ageA.age - ageB.age);
+
+console.log(newArr);
+
+//TODO:=========task-10=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
+
+// const users = [
+//     { name: "John", age: 27 },
+//     { name: "Jane", age: 31 },
+//     { name: "Bob", age: 19 },
+// ];
+
+// const newUsers = users.filter((item) => item.age > 20);
+// console.log(newUsers);
