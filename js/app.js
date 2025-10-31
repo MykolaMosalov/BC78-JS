@@ -131,3 +131,19 @@
 // const requiredNum = arr.find((number) => number > 3);
 
 // console.log(requiredNum);
+
+//TODO:=========task-07=================
+// Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+const array = [4, 2, 5, 1, 3];
+
+const sort = (arr) => arr.toSorted((a, b) => a - b);
+console.log(sort(array));
+
+//TODO:===============task-08===============================
+// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
+
+const strArr = ["banana", "orange", "apple", "pear"];
+
+const strSort = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
+
+console.log(strSort(strArr));
