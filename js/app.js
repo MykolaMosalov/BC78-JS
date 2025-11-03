@@ -103,30 +103,30 @@ console.log(user);
 //TODO:=========task-03=================
 // Створити глобальну функцію для обьекта "user", що може додавати властивості об'єкту, в контексті якого вона буде викликана. Додати цю функцію як метод об'єкта user, та додати за допомогою неї властивість friends із значенням:
 
-const friends = [
-  {
-    firstName: "Mary",
-    lastName: "Smith",
-    age: 32,
-    email: "marysmith@hotmail.com",
-  },
-  {
-    firstName: "Alex",
-    lastName: "Johnson",
-    age: 45,
-    email: "alex.johnson@yahoo.com",
-  },
-  {
-    firstName: "Emily",
-    lastName: "Davis",
-    age: 19,
-    email: "emilydavis@gmail.com",
-  },
-];
+// const friends = [
+//   {
+//     firstName: "Mary",
+//     lastName: "Smith",
+//     age: 32,
+//     email: "marysmith@hotmail.com",
+//   },
+//   {
+//     firstName: "Alex",
+//     lastName: "Johnson",
+//     age: 45,
+//     email: "alex.johnson@yahoo.com",
+//   },
+//   {
+//     firstName: "Emily",
+//     lastName: "Davis",
+//     age: 19,
+//     email: "emilydavis@gmail.com",
+//   },
+// ];
 
-function addProperty(key, value) {
-  this[key] = value;
-}
+// function addProperty(key, value) {
+//   this[key] = value;
+// }
 
 // const obj = {};
 
@@ -156,23 +156,41 @@ function addProperty(key, value) {
 
 // console.log(newObj.commonInfoUser());
 
-const obj = {
-  firstName: "Bob",
-  lastName: "Lasso",
-  age: 50,
-  email: "BodLasso@gmail.com",
+// const obj = {
+//   firstName: "Bob",
+//   lastName: "Lasso",
+//   age: 50,
+//   email: "BodLasso@gmail.com",
+// };
+
+// user.commonInfoUser.call(obj);
+// console.log(user.modifyInfoUser.call(obj, "hobby", "it"));
+// console.log(obj);
+
+// //TODO:=========task-05=================
+// //  Викличте функцію showFullName у контексті об'єкта user
+
+// function showFullName(message) {
+//   console.log(`${message} ${this.firstName} ${this.lastName}`);
+// }
+
+// showFullName.call(obj, "Hello");
+// showFullName.apply(user, ["Greetings"]);
+
+//TODO:=========task-06=================
+// Виправте помилки, щоб код працював
+
+const product = {
+  price: 5000,
+
+  showPrice() {
+    console.log(this.price);
+  },
 };
 
-user.commonInfoUser.call(obj);
-console.log(user.modifyInfoUser.call(obj, "hobby", "it"));
-console.log(obj);
-
-//TODO:=========task-05=================
-//  Викличте функцію showFullName у контексті об'єкта user
-
-function showFullName(message) {
-  console.log(`${message} ${this.firstName} ${this.lastName}`);
+function callAction(callback, context) {
+  callback.call(context);
 }
 
-showFullName.call(obj, "Hello");
-showFullName.apply(user, ["Greetings"]);
+// callAction(product.showPrice.bind(product));
+callAction(product.showPrice, product);
