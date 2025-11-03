@@ -62,3 +62,40 @@
 // console.log(user.greed());
 // console.log(user.showIsActive());
 // console.log(human.greed());
+
+//TODO:=========task-01=================
+// Створити об'єкт, який представляє користувача. У об'єкті повинні бути наступні поля: ім'я, прізвище, вік, email та метод, який виводить
+// повну інформацію про користувача.
+
+const user = {
+  firstName: "Vadym",
+  lastName: "Buinov",
+  age: 37,
+  email: "test@gmail.com",
+  commonInfoUser() {
+    console.log(
+      `${this.firstName} ${this.lastName} is ${this.age} old, email: ${this.email},`
+    );
+  },
+  modifyInfoUser(key, value) {
+    if (key !== "firstName" && key !== "lastName") {
+      return "Key is not valid";
+    }
+
+    if (value[0] === value[0].toLowerCase() || value.length < 3) {
+      return "Value is not valid";
+    }
+
+    this[key] = value;
+  },
+};
+
+// user.modifyInfoUser("firstName", "Vasilii");
+// user.modifyInfoUser("firstName", "Vasilii");
+console.log(user.modifyInfoUser("firstName", "Benedict"));
+
+console.log(user);
+
+//TODO:=========task-02=================
+// Для обьекта "user", написати метод для зміни ім'я або прізвища(змінити можна лише якесь з цих полів, змінювати або додавати нові
+//потрібно заборонити) з перевіркою на валідність даних(Перша літера має бути у верхньому реєстрі, довжина слова не менше 3 літер)
