@@ -167,3 +167,55 @@
 
 // console.log(client.login);
 // console.log(client.email);
+
+//! Статичний метод
+//TODO:=========task-03=================
+/**
+ * Напиши клас Notes який управляє колекцією нотаток у властивості items.
+ * Нотатка - це об'єкт із властивостями text і priority.
+ * Додай класу статичний метод Priopity, який буде повертати об'єкт із пріоритетами.
+ * Додай методи
+ * - addNote(note),
+ * - removeNote(text)
+ * - updatePriority(text, newPriority)
+ */
+class Notes {
+  static Priopity() {
+    return {
+      high: "HIGH",
+      low: "LOW",
+    };
+  }
+
+  constructor() {
+    this.items = [];
+  }
+
+  addNote(note) {
+    this.items.push(note);
+  }
+  removeNote(note) {
+    this.items = this.items.filter((item) => item.text !== note.text);
+  }
+  updatePriority(note, newPriority) {
+    const a = this.items.find((item) => item.text === note.text);
+    if (a) {
+      a.priopity = newPriority;
+    }
+  }
+}
+
+// const note = new Notes();
+
+// note.addNote({ text: "вивчити класи", priopity: Notes.Priopity().high });
+
+// note.addNote({ text: "вивчили класи", priopity: Notes.Priopity().low });
+
+// note.removeNote({ text: "вивчити класи", priopity: Notes.Priopity().low });
+
+// note.updatePriority(
+//   { text: "вивчили класи", priopity: "LOW" },
+//   Notes.Priopity().high
+// );
+
+// console.log(note);
