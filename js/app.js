@@ -179,31 +179,31 @@
  * - removeNote(text)
  * - updatePriority(text, newPriority)
  */
-class Notes {
-  static Priopity() {
-    return {
-      high: "HIGH",
-      low: "LOW",
-    };
-  }
+// class Notes {
+//   static Priopity() {
+//     return {
+//       high: "HIGH",
+//       low: "LOW",
+//     };
+//   }
 
-  constructor() {
-    this.items = [];
-  }
+//   constructor() {
+//     this.items = [];
+//   }
 
-  addNote(note) {
-    this.items.push(note);
-  }
-  removeNote(note) {
-    this.items = this.items.filter((item) => item.text !== note.text);
-  }
-  updatePriority(note, newPriority) {
-    const a = this.items.find((item) => item.text === note.text);
-    if (a) {
-      a.priopity = newPriority;
-    }
-  }
-}
+//   addNote(note) {
+//     this.items.push(note);
+//   }
+//   removeNote(note) {
+//     this.items = this.items.filter((item) => item.text !== note.text);
+//   }
+//   updatePriority(note, newPriority) {
+//     const a = this.items.find((item) => item.text === note.text);
+//     if (a) {
+//       a.priopity = newPriority;
+//     }
+//   }
+// }
 
 // const note = new Notes();
 
@@ -219,3 +219,82 @@ class Notes {
 // );
 
 // console.log(note);
+
+//! Практика наслідування у класах.
+//TODO:=========task-04=================
+/**
+  |============Person================
+  | Cтворіть клас `Person`, який містить наступні властивості:
+  |  - `name` - ім'я людини;
+  |  - `age`- вік людини;
+  |  - `gender` - стать людини;
+  |  - `email`- електронна пошта людини.
+  |
+  | ##### Крім того, клас `Person` має мати метод `getDetails()`, який повертає об'єкт з ім'ям, віком, статтю та електронною поштою людини.
+  |============================
+*/
+
+class Person {
+  constructor(obj) {
+    const { name, age, gender, email } = obj;
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.email = email;
+  }
+
+  getDetails() {
+    return this;
+  }
+}
+
+const obj = {
+  name: "Artem",
+  age: 30,
+  gender: "male",
+  email: "example@gmail.com",
+};
+
+const human = new Person(obj);
+console.log(human.getDetails());
+
+/**
+  |=============Employee===============
+  |Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+  |  - salary - зарплата співробітника;
+  |  - department - відділ, в якому працює співробітник.
+  |  ##### Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника, зарплатою та відділом, в якому працює співробітник.
+  |============================
+*/
+
+const obj2 = {
+  id: 2,
+  name: "Mykola",
+  age: 30,
+  gender: "male",
+  email: "test@gmail.com",
+  salary: 30000,
+  departament: "Web",
+};
+
+class Employee extends Person {
+  constructor(obj) {
+    const { salary, departament, id } = obj;
+    super(obj);
+    this.salary = salary;
+    this.departament = departament;
+    this.id = id;
+  }
+
+  getEmployeeDetails() {
+    return {
+      id: this.id,
+      salary: this.salary,
+      departament: this.departament,
+    };
+  }
+}
+
+const employee = new Employee(obj2);
+console.log(employee);
+console.log(employee.getEmployeeDetails());
