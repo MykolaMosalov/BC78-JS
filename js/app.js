@@ -130,3 +130,40 @@
 // calculator.number(25).add(25).multiply(2).substruct(45).getResult(); // 55
 // calculator2.number(10).add(10).multiply(2).substruct(45).getResult(); // - 5
 // calculator3.number(25).multiply(2).add(10).getResult(); // 60
+
+//! Приватні властивості
+//TODO:=========task-02=================
+/**
+ * Напиши клас Client який створює об'єкт з ​​властивостями login email.
+ *
+ * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
+ */
+
+// class Client {
+//   #login;
+//   #email;
+
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const client = new Client("Vlad", "vladik567@gmail.com");
+
+// console.log(client.login);
+// console.log(client.email);
