@@ -61,3 +61,75 @@
 // const divideNumber = (num) => num / 5;
 
 // console.log(manipulateArray(array, multiplyBy2, divideNumber));
+
+//! Замикання
+//TODO:=================task-02=============================
+// Напишіть функцію makeСhef(сhefName), яка повертає функцію
+// makeDish(dish), що пам'ятає ім'я шефа при її виклику
+// Функція makeDish має логірувати "<shef> is cooking <dish>"
+
+/**
+ * Параметр сhefName это локальная переменная для функции makeСhef.
+ * Это значит что она будет доступна функции makeDish через замыкание.
+ */
+
+// function makeChef(chefName) {
+//   return function makeDish(dish) {
+//     return `${chefName} is cooking ${dish}`;
+//   };
+// }
+
+// const chef1 = makeChef("Parmesano");
+// const chef2 = makeChef("Mamma-mia");
+
+// console.log(chef1("La Pasta"));
+// console.log(chef2("La Pizza"));
+
+//! Arrow method
+//TODO:=================task-06=============================
+// У кожному масиві якщо унікальний рядок, у якому не повторюються літери.
+// Знайдіть і виведіть цей рядок.
+
+const stringArr = ["abc", "acb", "bac", "foo", "bca", "cab", "jhgf", "cba"];
+const stringArr2 = ["fghj", "ghfj", "abcd", "jhgf", "fghj", "fgjh", "ghjf"];
+
+// ["bac", "acb", "bac", "foo", "bca", "cab", "cba"] // === 'foo'
+// ['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'] // === 'abcd'
+
+// function searchUniq(arr) {
+//   let check1 = arr[0];
+//   let check2 = arr[1];
+
+//   for (let i = 2; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//       if (check1.includes(arr[i][j]) && check2.includes(arr[i][j])) {
+//         check2 = arr[i];
+//         break;
+//       } else {
+//         return arr[i];
+//       }
+//     }
+//   }
+// }
+
+// function searchUniq(arr) {
+//   return arr.find((string, idx, array) => {
+//     const sortString = string
+//       .split("")
+//       .toSorted((a, b) => a.localeCompare(b))
+//       .join("");
+
+//     return array.every(
+//       (str, index) =>
+//         index === idx ||
+//         sortString !==
+//           str
+//             .split("")
+//             .toSorted((a, b) => a.localeCompare(b))
+//             .join("")
+//     );
+//   });
+// }
+
+// console.log(searchUniq(stringArr));
+// console.log(searchUniq(stringArr2));
