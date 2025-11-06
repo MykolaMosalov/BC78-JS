@@ -191,11 +191,26 @@
 
 //!----- Task-1-----//
 const bodyEl = document.querySelector("body");
-console.log(bodyEl);
+// console.log(bodyEl);
 //!----- Task-2-----//
 const titleEl = document.querySelector("#title");
-console.log(titleEl);
+// console.log(titleEl);
 //!----- Task-3-----//
 const listEl = document.querySelector(".list");
-console.log(listEl);
+// console.log(listEl);
 //!----- Task-4-----//
+const topicsEl = document.querySelectorAll("[data-topic]");
+console.log(topicsEl);
+//!----- Task-5-----//
+const topicEl = document.querySelector("[data-topic]");
+console.log(topicEl);
+//!----- Task-6-----//
+// const lastTopicEl = document.querySelector("[data-topic='manipulation']");
+const lastTopicEl = topicsEl[topicsEl.length - 1];
+console.log(lastTopicEl);
+//!----- Task-7-----//
+const titleSibling = titleEl.nextElementSibling;
+console.log(titleSibling);
+//!----- Task-8-----//
+const subTitlesEl = document.querySelectorAll("h3");
+console.log(subTitlesEl);
