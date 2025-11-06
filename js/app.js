@@ -226,13 +226,59 @@ const navEl = document.querySelector("[data-topic='navigation']");
 navEl.style.backgroundColor = "yellow";
 //!----- Task-12-----//
 
-navEl.lastElementChild.textContent = 'Я змінив тут текст!';
+navEl.lastElementChild.textContent = "Я змінив тут текст!";
 //!----- Task-13-----//
 const currentTopic = "search";
 const topicEl = document.querySelector(`[data-topic='${currentTopic}']`);
 // console.log(topicEl);
 //!----- Task-14-----//
-topicEl.style.backgroundColor = 'blue';
+topicEl.style.backgroundColor = "blue";
 //!----- Task-15-----//
 const competedEl = document.querySelector(".completed");
 // console.log(competedEl);
+
+//!----- Task-16-----//
+//видали елемент li в якому знаходиться заголовок, який має class="completed"
+
+competedEl.parentNode.remove();
+
+//!----- Task-17-----//
+// 17 - після заголовка h1 (перед списком) додай новий елемент p і задай йому наступний текст: "Об'єктна модель документа (Document Object Model)"
+
+const p = document.createElement("p");
+p.textContent = "Об'єктна модель документа (Document Object Model)";
+titleEl.after(p);
+
+//!----- Task-18-----//
+// 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML" а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу". тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
+
+// const li = document.createElement("li");
+// const h3 = document.createElement("h3");
+// h3.textContent = "Властивість innerHTML";
+// const description = document.createElement("p");
+
+// description.textContent =
+//   "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу";
+
+// li.appendChild(h3);
+// li.appendChild(description);
+
+// listEl.append(li);
+// console.log(li);
+//!----- Task-19-----//
+// 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
+
+const li = `
+<li>
+              <h3>"Властивість innerHTML"</h3>
+              <p>
+                "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу"
+              </p>
+            </li>
+`;
+listEl.insertAdjacentHTML("beforeend", li);
+
+//!----- Task-20-----//
+// 20 - очисти список
+
+listEl.innerHTML = "";
