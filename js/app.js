@@ -188,3 +188,14 @@
 // 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML" а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу". тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
 // 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
 // 20 - очисти список
+
+//!----- Task-1-----//
+const bodyEl = document.querySelector("body");
+console.log(bodyEl);
+//!----- Task-2-----//
+const titleEl = document.querySelector("#title");
+console.log(titleEl);
+//!----- Task-3-----//
+const listEl = document.querySelector(".list");
+console.log(listEl);
+//!----- Task-4-----//
