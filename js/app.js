@@ -202,7 +202,7 @@ const listEl = document.querySelector(".list");
 const topicsEl = document.querySelectorAll("[data-topic]");
 // console.log(topicsEl);
 //!----- Task-5-----//
-const topicEl = document.querySelector("[data-topic]");
+// const topicEl = document.querySelector("[data-topic]");
 // console.log(topicEl);
 //!----- Task-6-----//
 // const lastTopicEl = document.querySelector("[data-topic='manipulation']");
@@ -224,3 +224,15 @@ const navEl = document.querySelector("[data-topic='navigation']");
 
 //!----- Task-11-----//
 navEl.style.backgroundColor = "yellow";
+//!----- Task-12-----//
+
+navEl.lastElementChild.textContent = 'Я змінив тут текст!';
+//!----- Task-13-----//
+const currentTopic = "search";
+const topicEl = document.querySelector(`[data-topic='${currentTopic}']`);
+// console.log(topicEl);
+//!----- Task-14-----//
+topicEl.style.backgroundColor = 'blue';
+//!----- Task-15-----//
+const competedEl = document.querySelector(".completed");
+// console.log(competedEl);
