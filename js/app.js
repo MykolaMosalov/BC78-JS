@@ -115,22 +115,33 @@
 // });
 
 //TODO:===========2===============
-//2 - При події `focus` зроби перевірку на пустоту поля інпута, якщо ж поле пусте, то зроби `outline` => `'3px solid red'`, якщо при фокусі поле непусте, то `outline` => `'3px solid green'`
-const inputEl = document.querySelector(".js-username-input");
+// //2 - При події `focus` зроби перевірку на пустоту поля інпута, якщо ж поле пусте, то зроби `outline` => `'3px solid red'`, якщо при фокусі поле непусте, то `outline` => `'3px solid green'`
+// const inputEl = document.querySelector(".js-username-input");
 
-const eventFormula = (event) => {
-    const input = event.currentTarget;
-    if (input.value.trim() === "") {
-        input.style.outline = "3px solid red";
-    } else {
-        input.style.outline = "3px solid green";
-    }
-    console.dir(event);
-};
+// const eventFormula = (event) => {
+//     const input = event.currentTarget;
+//     if (input.value.trim() === "") {
+//         input.style.outline = "3px solid red";
+//     } else {
+//         input.style.outline = "3px solid green";
+//     }
+//     console.dir(event);
+// };
 
-inputEl.addEventListener("focus", eventFormula);
+// inputEl.addEventListener("focus", eventFormula);
 
 //TODO:===========3===============
+//При події `blur` зроби перевірку на пустоту поля інпута, якщо ж поле пусте, то зроби `outline` => `'3px solid red'`, якщо при фокусі поле непусте, то `outline` => `'3px solid lime'`
+const inputEl = document.querySelector(".js-username-input");
+inputEl.addEventListener("blur", onBlur);
+function onBlur(event) {
+  const input = event.currentTarget;
+  if (input.value.trim() === "") {
+    input.style.outline = "3px solid red";
+  } else {
+    input.style.outline = "3px solid lime";
+  }
+}
 
 //TODO:===========4===============
 
