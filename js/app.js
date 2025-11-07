@@ -206,6 +206,22 @@ function onInput() {
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
 // Додати класи на список eventList, на елементи eventCode та eventKey
 
+const eventList = document.querySelector(".eventThumb");
+
+function onKeydownPress(event) {
+  eventList.insertAdjacentHTML(
+    "beforeend",
+    `<ul>
+      <li>event.key: ${event.key}</li>
+      <li>event.code: ${event.code}</li>
+    </ul>
+    `
+  );
+  // eventList.appendChild('li')
+}
+
+document.addEventListener("keydown", onKeydownPress);
+
 //TODO:=========task-04=================
 // Кнопка "Зменшити" робить квадрат меншим на 20 пікселів, кнопка "Збільшити" - робить більшим на 10 пікселів.
 //
