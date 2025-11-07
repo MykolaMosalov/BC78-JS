@@ -225,3 +225,41 @@ document.addEventListener("keydown", onKeydownPress);
 //TODO:=========task-04=================
 // Кнопка "Зменшити" робить квадрат меншим на 20 пікселів, кнопка "Збільшити" - робить більшим на 10 пікселів.
 //
+
+const decreaseBtnEl = document.querySelector(".js-decrease");
+const increaseBtnEl = document.querySelector(".js-increase");
+const boxEl = document.querySelector(".box");
+
+decreaseBtnEl.addEventListener("click", onClick);
+increaseBtnEl.addEventListener("click", onClick);
+
+function onClick(event) {
+  const boxHeight = boxEl.clientHeight;
+
+  if (event.currentTarget.id === "increase") {
+    boxEl.style.height = `${boxHeight + 10}px`;
+    boxEl.style.width = `${boxHeight + 10}px`;
+
+    return;
+  }
+
+  boxEl.style.height = `${boxHeight - 20}px`;
+  boxEl.style.width = `${boxHeight - 20}px`;
+}
+
+// decreaseBtnEl.addEventListener("click", decreaseBox);
+// increaseBtnEl.addEventListener("click", increaseBox);
+
+// function decreaseBox(event) {
+//   const boxHeight = boxEl.clientHeight;
+
+//   boxEl.style.height = `${boxHeight - 20}px`;
+//   boxEl.style.width = `${boxHeight - 20}px`;
+// }
+
+// function increaseBox(event) {
+//   const boxHeight = boxEl.clientHeight;
+
+//   boxEl.style.height = `${boxHeight + 10}px`;
+//   boxEl.style.width = `${boxHeight + 10}px`;
+// }

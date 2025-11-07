@@ -1,49 +1,56 @@
 .text-input,
 .form-input {
-    height: 40px;
-    width: 360px;
-    padding-left: 20px;
-    border-radius: 16px;
+  height: 40px;
+  width: 360px;
+  padding-left: 20px;
+  border-radius: 16px;
 
-    border: 1px solid #5e5e5e;
-    outline: none;
+  border: 1px solid #5e5e5e;
+  outline: none;
 }
 
 .success {
-    border: 2px solid green;
-    outline: none;
+  border: 2px solid green;
+  outline: none;
 }
 
 .error {
-    border: 2px solid red;
-    outline: none;
+  border: 2px solid red;
+  outline: none;
 }
 
 .contact-form-input {
-    outline: none;
+  outline: none;
 }
 
 .list {
 }
 .btn {
-    border: none;
-    width: 150px;
-    height: 40px;
-    border-radius: 4px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
+  border: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #5e5e5e;
-    color: #fff;
+  background-color: #5e5e5e;
+  color: #fff;
 }
 .form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 30px;
 }
 .form-input {
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border: 2px dashed red;
+  margin: 10px;
 }
