@@ -145,6 +145,31 @@ function onBlur(event) {
 
 //TODO:===========4===============
 
+// При події `submit`. Відміни поведінку браузера по змовчуванню. Дістань данні з інпуту і чек боксу, зроби перевірку, що інпут не порожній, також, що нажатий чек бокс у положення true, якщо користувач все виконав вірно, збери данні (userName) у обьект і виведи у консоль. У разі, якщо користувач не виконав одну із умов, виведи повідомлення. Також реалізуй додавання ім`я користувача у span, замість слова "Anonymous". Якщо користувач ввів ім`я, а потім видали, зроби так, щоб на місце повернулось дефолтне знаяення "Anonymous". При відправці форми, очисти інпут, верни чек бокс у положення false, верни дефолтне значення "Anonymous" у span.
+
+const formEl = document.querySelector(".js-contact-form");
+console.log(formEl);
+
+formEl.addEventListener("submit", onSubmit);
+
+function onSubmit(event) {
+  event.preventDefault();
+
+  const { userName, accept } = event.currentTarget.elements;
+  console.log(accept.checked);
+
+  if (userName.value.trim() === "" || !accept.checked) {
+    return alert("Error!");
+  }
+
+  const data = {
+    userName: userName.value.trim(),
+  };
+  console.log(data);
+
+  event.currentTarget.reset();
+}
+
 //TODO:=========task-02=================
 // Кнопка "Приховати" ховає текст і замінює назву кнопки на "Розкрити", у разі повторного натискання текст знову стає доступним і кнопка набуває початкового вигляду.
 
