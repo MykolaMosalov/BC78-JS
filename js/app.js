@@ -148,9 +148,11 @@ function onBlur(event) {
 // При події `submit`. Відміни поведінку браузера по змовчуванню. Дістань данні з інпуту і чек боксу, зроби перевірку, що інпут не порожній, також, що нажатий чек бокс у положення true, якщо користувач все виконав вірно, збери данні (userName) у обьект і виведи у консоль. У разі, якщо користувач не виконав одну із умов, виведи повідомлення. Також реалізуй додавання ім`я користувача у span, замість слова "Anonymous". Якщо користувач ввів ім`я, а потім видали, зроби так, щоб на місце повернулось дефолтне знаяення "Anonymous". При відправці форми, очисти інпут, верни чек бокс у положення false, верни дефолтне значення "Anonymous" у span.
 
 const formEl = document.querySelector(".js-contact-form");
-console.log(formEl);
+const formSpanEl = document.querySelector(".js-username-output");
+const formInputEl = document.querySelector(".js-username-input");
 
 formEl.addEventListener("submit", onSubmit);
+formInputEl.addEventListener("input", onInput);
 
 function onSubmit(event) {
   event.preventDefault();
@@ -168,10 +170,37 @@ function onSubmit(event) {
   console.log(data);
 
   event.currentTarget.reset();
+  formSpanEl.textContent = "Anonymous";
+}
+
+// function onInput(event) {
+//   const input = formInputEl.value.trim();
+//   input === ""
+//     ? (formSpanEl.textContent = "Anonymous")
+//     : (formSpanEl.textContent = input);
+// }
+
+function onInput() {
+  formSpanEl.textContent = formInputEl.value.trim() || "Anonymous";
 }
 
 //TODO:=========task-02=================
 // Кнопка "Приховати" ховає текст і замінює назву кнопки на "Розкрити", у разі повторного натискання текст знову стає доступним і кнопка набуває початкового вигляду.
+
+// const InputEl = document.querySelector(".js-password-input");
+// const passwordBtnEl = document.querySelector(".js-password-button");
+
+// passwordBtnEl.addEventListener("click", passwordBtnChanger);
+
+// function passwordBtnChanger(event) {
+//   if (InputEl.type === "text") {
+//     InputEl.type = "password";
+//     event.currentTarget.textContent = "Розкрити";
+//     return;
+//   }
+//   InputEl.type = "text";
+//   event.currentTarget.textContent = "Приховати";
+// }
 
 //TODO:=========task-03=================
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
