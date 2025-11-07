@@ -99,8 +99,36 @@
 // find refs
 
 //TODO:===========1===============
+//** 1 - При події `input`, якщо користувач ввів в поле більше 6 символів то додати клас `success`. Якщо ж символів менше аніж 6, то клас `error`
+
+// const inputEl = document.querySelector(".js-username-input");
+// // console.log(inputEl);
+
+// inputEl.addEventListener("input", (event) => {
+//     if (event.currentTarget.value.trim().length > 6) {
+//         event.currentTarget.classList.add("success");
+//         event.currentTarget.classList.remove("error");
+//     } else {
+//         event.currentTarget.classList.add("error");
+//         event.currentTarget.classList.remove("success");
+//     }
+// });
 
 //TODO:===========2===============
+//2 - При події `focus` зроби перевірку на пустоту поля інпута, якщо ж поле пусте, то зроби `outline` => `'3px solid red'`, якщо при фокусі поле непусте, то `outline` => `'3px solid green'`
+const inputEl = document.querySelector(".js-username-input");
+
+const eventFormula = (event) => {
+    const input = event.currentTarget;
+    if (input.value.trim() === "") {
+        input.style.outline = "3px solid red";
+    } else {
+        input.style.outline = "3px solid green";
+    }
+    console.dir(event);
+};
+
+inputEl.addEventListener("focus", eventFormula);
 
 //TODO:===========3===============
 
@@ -115,3 +143,4 @@
 
 //TODO:=========task-04=================
 // Кнопка "Зменшити" робить квадрат меншим на 20 пікселів, кнопка "Збільшити" - робить більшим на 10 пікселів.
+//
