@@ -33,14 +33,14 @@
  * при кліку на елемент меню, розкривай блок з текстом.При повторному кліку по елементу,
  * розкритий текст приховується.Нажимаючи на інші елементи меню, попередньо відкриті елементи не закриваються.
  */
-const acardeonList = document.querySelector('.js-accordion-list');
-acardeonList.addEventListener('click', openUlEl);
+const acardeonList = document.querySelector(".js-accordion-list");
+acardeonList.addEventListener("click", openUlEl);
 
 function openUlEl(e) {
-    const btn = e.target;
+  const btn = e.target;
 
-    if (btn.nodeName !== 'BUTTON') return;
-    btn.nextElementSibling.classList.toggle('active');
+  if (btn.nodeName !== "BUTTON") return;
+  btn.nextElementSibling.classList.toggle("active");
 }
 //TODO:=========task-02=======Pagination==========
 /**
@@ -48,3 +48,33 @@ function openUlEl(e) {
  * Використовуй поширення подій.Додавай клас`active` на поточну сторінку. Створи допоміжну функцію`updateActivePage`, яка повинна обновляти активний клас.
  * Функція`handleClick`повинна викликатися коли відбувається клік на елементі`pagination`.
  */
+
+const paginationList = document.querySelector(".js-pagination");
+
+paginationList.addEventListener("click", powrClick);
+
+function powrClick(e) {
+  const target = e.target;
+  const activeBtn = paginationList.querySelector(".active");
+  if (target.nodeName !== "LI") return;
+  if (target.dataset.type === "page") {
+    activeBtn.classList.remove("active");
+    target.classList.add("active");
+    return;
+  }
+  if (
+    target.dataset.type === "next" &&
+    activeBtn.nextElementSibling.dataset.type === "page"
+  ) {
+    activeBtn.classList.remove("active");
+    activeBtn.nextElementSibling.classList.add("active");
+    return;
+  }
+  if (
+    target.dataset.type === "prev" &&
+    activeBtn.previousElementSibling.dataset.type === "page"
+  ) {
+    activeBtn.classList.remove("active");
+    activeBtn.previousElementSibling.classList.add("active");
+  }
+}
