@@ -29,11 +29,19 @@
 
 //TODO:=========task-01=======Accordion==========
 /**
- * Викоритовуй шаблон акордеон меню з файлу html та напиши наступний функціонал:
+ * Викориcтовуй шаблон акордеон меню з файлу html та напиши наступний функціонал:
  * при кліку на елемент меню, розкривай блок з текстом.При повторному кліку по елементу,
  * розкритий текст приховується.Нажимаючи на інші елементи меню, попередньо відкриті елементи не закриваються.
  */
+const acardeonList = document.querySelector('.js-accordion-list');
+acardeonList.addEventListener('click', openUlEl);
 
+function openUlEl(e) {
+    const btn = e.target;
+
+    if (btn.nodeName !== 'BUTTON') return;
+    btn.nextElementSibling.classList.toggle('active');
+}
 //TODO:=========task-02=======Pagination==========
 /**
  * Викоритовуй шаблон пагінації з файлу html для розробки функціоналу пагінатора.
