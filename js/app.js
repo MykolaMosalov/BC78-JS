@@ -49,32 +49,58 @@ function openUlEl(e) {
  * Функція`handleClick`повинна викликатися коли відбувається клік на елементі`pagination`.
  */
 
-const paginationList = document.querySelector(".js-pagination");
+// const paginationList = document.querySelector(".js-pagination");
 
-paginationList.addEventListener("click", powrClick);
+// paginationList.addEventListener("click", powrClick);
 
-function powrClick(e) {
-  const target = e.target;
-  const activeBtn = paginationList.querySelector(".active");
-  if (target.nodeName !== "LI") return;
-  if (target.dataset.type === "page") {
-    activeBtn.classList.remove("active");
-    target.classList.add("active");
-    return;
+// function powrClick(e) {
+//   const target = e.target;
+//   const activeBtn = paginationList.querySelector(".active");
+//   if (target.nodeName !== "LI") return;
+//   if (target.dataset.type === "page") {
+//     activeBtn.classList.remove("active");
+//     target.classList.add("active");
+//     return;
+//   }
+//   if (
+//     target.dataset.type === "next" &&
+//     activeBtn.nextElementSibling.dataset.type === "page"
+//   ) {
+//     activeBtn.classList.remove("active");
+//     activeBtn.nextElementSibling.classList.add("active");
+//     return;
+//   }
+//   if (
+//     target.dataset.type === "prev" &&
+//     activeBtn.previousElementSibling.dataset.type === "page"
+//   ) {
+//     activeBtn.classList.remove("active");
+//     activeBtn.previousElementSibling.classList.add("active");
+//   }
+// }
+
+const btnWrapper = document.querySelector(".btn-wrapper");
+let previousBtnBackgroudColor = "";
+
+const btnChangeColor = (e) => {
+  let target = e.target;
+  if (target.nodeName !== "BUTTON") return;
+
+  if (previousBtnBackgroudColor) {
+    btnWrapper
+      .querySelector(`.${previousBtnBackgroudColor}`)
+      .classList.remove(previousBtnBackgroudColor);
   }
-  if (
-    target.dataset.type === "next" &&
-    activeBtn.nextElementSibling.dataset.type === "page"
-  ) {
-    activeBtn.classList.remove("active");
-    activeBtn.nextElementSibling.classList.add("active");
-    return;
-  }
-  if (
-    target.dataset.type === "prev" &&
-    activeBtn.previousElementSibling.dataset.type === "page"
-  ) {
-    activeBtn.classList.remove("active");
-    activeBtn.previousElementSibling.classList.add("active");
-  }
-}
+  const currentBtnBackgroundColor = target.textContent.toLowerCase();
+  // Variant 1
+  // [...btnWrapper.children].forEach((li) => {
+  //   const btn = li.firstElementChild;
+  //   const updateBtnBackground = btn.textContent.toLowerCase();
+  //   btn.classList.remove(updateBtnBackground);
+  // });
+
+  target.classList.add(currentBtnBackgroundColor);
+  previousBtnBackgroudColor = currentBtnBackgroundColor;
+};
+
+btnWrapper.addEventListener("click", btnChangeColor);

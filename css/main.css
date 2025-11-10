@@ -150,3 +150,27 @@ ul {
 .btn-wrapper button:hover {
   background-color: #6134d4;
 }
+
+.btn-wrapper button.orange {
+  background-color: orange;
+}
+
+.btn-wrapper button.green {
+  background-color: green;
+}
+
+.btn-wrapper button.red {
+  background-color: red;
+}
+
+.btn-wrapper button.yellow {
+  background-color: yellow;
+}
+
+.btn-wrapper button.blue {
+  background-color: blue;
+}
+
+.btn-wrapper button.tomato {
+  background-color: tomato;
+}
