@@ -26,3 +26,24 @@
 .color-span {
   background-color: purple;
 }
+
+.odd {
+  background-color: lime;
+}
+.even {
+  background-color: yellow;
+}
+
+.number-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.number {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
