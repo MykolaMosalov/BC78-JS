@@ -33,17 +33,44 @@
  * яка повертатиме масив елементів(масив з лішками).
  */
 
-const appendFruitList = ['apple🍎', 'banana🍌'];
-const prependFruitList = ['grapes🍇', 'orange🍊'];
-const beforeFruitList = ['strawberry🍓', 'cherry🍒'];
-const afterFruitList = ['peach🍑', 'kiwi🥝'];
+// const appendFruitList = ["apple🍎", "banana🍌"];
+// const prependFruitList = ["grapes🍇", "orange🍊"];
+// const beforeFruitList = ["strawberry🍓", "cherry🍒"];
+// const afterFruitList = ["peach🍑", "kiwi🥝"];
+
+// const ingredientsList = document.querySelector(".ingredients-list");
+
+// const elementsOfIngridients = (arr) => {
+//   return arr.map((item) => {
+//     const li = document.createElement("li");
+//     li.textContent = item;
+//     return li;
+//   });
+// };
+
+// ingredientsList.append(...elementsOfIngridients(appendFruitList));
+// ingredientsList.prepend(...elementsOfIngridients(prependFruitList));
+// ingredientsList.before(...elementsOfIngridients(beforeFruitList));
+// ingredientsList.after(...elementsOfIngridients(afterFruitList));
 
 //TODO:=========task-02=================
-// 3. Вставте даний текст в html документ, а потім виділіть усі слова, які мають більше 8 символів у тексті абзацу (наприклад, жовтим фоном).
+// 3. Вставте даний текст в html документ, а потім виділіть усі слова,  які мають більше 8 символів у тексті абзацу (наприклад, жовтим фоном).
 
 const text = `Об'єктна модель документа (Document Object Model) - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
 
 const words = text.split(/\s+/); // Розбиваємо текст на слова за допомогою роздільників (пробіли, коми, крапки і т.д.)
+
+const appendTextEl = (arr) =>
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `<p>${arr
+      .map((word) =>
+        word.length > 8 ? `<span class="color-span">${word}</span>` : word
+      )
+      .join(" ")}</p>`
+  );
+
+appendTextEl(words);
 
 //TODO:=========task-03=================
 // Створіть контейнер div (з класом numberContainer )в HTML-документі та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними числами від 1 до 100 і додайте їх до контейнера div(numberContainer). Парні числа повинні мати зелений фон (додати клас even), Непарні числа - жовтий фон (додати клас odd).

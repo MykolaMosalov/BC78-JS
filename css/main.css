@@ -14,11 +14,15 @@
   gap: 20px;
 }
 
-p {
+/* p {
   background-color: red;
-}
+} */
 
-span {
+/* span {
   display: block;
   background-color: green;
+} */
+
+.color-span {
+  background-color: purple;
 }
