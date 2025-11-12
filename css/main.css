@@ -1,0 +1,24 @@
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.item {
+  background-color: #5e5e5e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+p {
+  background-color: red;
+}
+
+span {
+  display: block;
+  background-color: green;
+}
