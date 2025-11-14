@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Module 5</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+            integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <section class="container">
+            <h2 class="title">About autemn</h2>
+            <ul class="section-list">
+                <li class="list-item">
+                    <img
+                        src="./img/11-20-2024-04-14-47-6367561140.jpg"
+                        alt=""
+                        class="section-list-img"
+                    />
+                </li>
+                <li class="list-item">
+                    <img
+                        src="./img/11-20-2024-04-14-47-6367561140.jpg"
+                        alt=""
+                        class="section-list-img"
+                    />
+                </li>
+                <li class="list-item">
+                    <img src="./img/7_.jpg" alt="" class="section-list-img" />
+                </li>
+            </ul>
+            <button
+                class="btn js-btn-open"
+                data-modal-open
+                data-modal-action="open"
+            >
+                Press me
+            </button>
+        </section>
+        <dialog class="modal js-modul">
+            <button class="modal-btn js-btn-close" type="button">X</button>
+            <form class="modal-form" name="revievForm">
+                <label class="modal-form-label">
+                    <span class="label-desc">Name</span>
+                    <input
+                        class="modal-form-input"
+                        name="userName"
+                        type="text"
+                    />
+                </label>
+
+                <label class="modal-form-label">
+                    <span class="label-desc">Email</span>
+                    <input
+                        class="modal-form-input"
+                        name="userEmail"
+                        type="email"
+                /></label>
+
+                <label class="modal-form-label">
+                    <span class="label-desc">Comment</span>
+                    <textarea
+                        class="modal-form-field"
+                        name="userReview"
+                        id=""
+                    ></textarea>
+                </label>
+                <button class="modal-form-btn" type="submit">Send</button>
+            </form>
+        </dialog>
+
+        <script type="module" src="./js/app.js"></script>
+    </body>
+</html>
